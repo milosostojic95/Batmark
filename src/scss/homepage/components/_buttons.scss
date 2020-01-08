@@ -5,12 +5,12 @@
   .btn-primary {
     background: $btnPrimary;
     border: none;
-    padding: 1.3vw;
+    padding: 1vw;
     margin-right: 20px;
     color: $headerSpan;
     border: 3px solid $btnPrimary;
     font-family: $bodyFontFamily;
-    font-weight: 700;
+    font-weight: 400;
     cursor: pointer;
 
     @include breakpoint(tablet) {
@@ -25,11 +25,11 @@
   .btn-second {
     background: transparent;
     border: 3px solid grey;
-    padding: 1.2vw;
+    padding: 1vw;
     margin-right: 20px;
     color: $headerSpan;
     font-family: $bodyFontFamily;
-    font-weight: 700;
+    font-weight: 400;
     cursor: pointer;
 
     @include breakpoint(tablet) {
