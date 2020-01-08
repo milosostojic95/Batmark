@@ -1,15 +1,20 @@
 @import './homepage/variables/home-variables';
 @import './base/base';
+@import './mixin/breakpoints';
 
+
+//fonts
 @import './base/fonts';
 
 
+//layouts
 
 @import './homepage/layouts/header';
 
 // sections
 
 @import './homepage/sections/home';
+@import './homepage/sections/why';
 
 // components
 

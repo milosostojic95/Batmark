@@ -1,22 +1,49 @@
 .intro-buttons {
   text-align: center;
 
+
   .btn-primary {
     background: $btnPrimary;
     border: none;
-    font-size: 1.1vw;
-    padding: 20px;
+    padding: 1.3vw;
     margin-right: 20px;
     color: $headerSpan;
+    border: 3px solid $btnPrimary;
+    font-family: $bodyFontFamily;
+    font-weight: 700;
+    cursor: pointer;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2vw;
+    }
+
+    @include breakpoint (desktop) {
+      font-size: 1.1vw;
+    }
   }
 
   .btn-second {
-    background: black;
-    border: none;
-    font-size: 1.1vw;
-    padding: 20px;
+    background: transparent;
+    border: 3px solid grey;
+    padding: 1.2vw;
     margin-right: 20px;
     color: $headerSpan;
+    font-family: $bodyFontFamily;
+    font-weight: 700;
+    cursor: pointer;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2vw;
+    }
+
+    @include breakpoint (desktop) {
+      font-size: 1.1vw;
+    }
+
+    &:hover {
+      background: $btnPrimary;
+      border: 3px solid $btnPrimary;
+    }
   }
 
 }

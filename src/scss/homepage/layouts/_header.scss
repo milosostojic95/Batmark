@@ -1,6 +1,6 @@
 .main-nav {
   background: $navBg;
-  padding: 2vw 0;
+  padding: 1vw 0;
   position: fixed;
   width: 100%;
 
@@ -9,6 +9,13 @@
     justify-content: space-between;
     align-items: center;
 
+    @include breakpoint (smallTablet) {
+      padding: 0 3rem;
+    }
+
+    @include breakpoint (laptop) {
+      padding: 0;
+    }
 
     .navbar-logo {
 
@@ -17,10 +24,16 @@
 
         h1 {
           color: $headerLogoColor;
-          font-size: 2vw;
+          @include breakpoint (smallTablet) {
+            font-size: 3.5vw;
+          }
+
+          @include breakpoint (tablet) {
+            font-size: 2.5vw;
+          }
 
            span {
-            color: $headerSpan;
+            color: $headerLink;
           }
         }
       }
@@ -29,15 +42,54 @@
     .navbar-nav {
       display: flex;
 
+      @include breakpoint(mobile) {
+        display: none;
+      }
+
+      @include breakpoint(smallTablet) {
+        display: flex;
+      }
+
       .navbar-link {
         list-style: none;
-        padding-right: 20px;
+        position: relative;
+        padding: 1vw 0;
+
+        &::before {
+          position: absolute;
+          content: '';
+          bottom: 0;
+          left: 0;
+          background: $headerLogoColor;
+          width: 0;
+          height: 3px;
+          transition: .4s ease;
+        }
+
+        &:hover::before {
+          width: 90%;
+        }
 
         a {
           color: $headerLink;
-          font-size: 1.1vw;
           font-family: $headingFontFamily;
           font-weight: 400;
+          padding-right: 20px;
+          @include breakpoint(smallTablet) {
+            font-size: 1.7vw;
+          }
+
+          @include breakpoint (tablet) {
+            font-size: 1.3vw;
+          }
+
+          @include breakpoint(laptop) {
+            font-size: 1.1vw;
+          }
+
+          @include breakpoint (desktop){
+            font-size: 1vw;
+          }
         }
       }
     }
