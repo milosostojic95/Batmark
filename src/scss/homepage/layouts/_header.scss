@@ -1,0 +1,47 @@
+.main-nav {
+  background: $navBg;
+  padding: 2vw 0;
+  position: fixed;
+  width: 100%;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .navbar-logo {
+
+      a {
+        display: inline-block;
+
+        h1 {
+          color: $headerLogoColor;
+          font-size: 2vw;
+
+           span {
+            color: $headerSpan;
+          }
+        }
+      }
+    }
+
+    .navbar-nav {
+      display: flex;
+
+      .navbar-link {
+        list-style: none;
+        padding-right: 20px;
+
+        a {
+          color: $headerLink;
+          font-size: 1.1vw;
+          font-family: $headingFontFamily;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+

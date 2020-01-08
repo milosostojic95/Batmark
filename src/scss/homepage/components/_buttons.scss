@@ -1,0 +1,22 @@
+.intro-buttons {
+  text-align: center;
+
+  .btn-primary {
+    background: $btnPrimary;
+    border: none;
+    font-size: 1.1vw;
+    padding: 20px;
+    margin-right: 20px;
+    color: $headerSpan;
+  }
+
+  .btn-second {
+    background: black;
+    border: none;
+    font-size: 1.1vw;
+    padding: 20px;
+    margin-right: 20px;
+    color: $headerSpan;
+  }
+
+}

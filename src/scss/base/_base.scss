@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $bodyFontFamily;
+}
+
+.row {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
