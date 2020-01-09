@@ -1,11 +1,10 @@
 .intro-buttons {
   text-align: center;
 
-
   .btn-primary {
     background: $btnPrimary;
     border: none;
-    padding: 1vw;
+    padding: .5vw;
     margin-right: 20px;
     color: $headerSpan;
     border: 3px solid $btnPrimary;
@@ -25,7 +24,7 @@
   .btn-second {
     background: transparent;
     border: 3px solid grey;
-    padding: 1vw;
+    padding: .5vw;
     margin-right: 20px;
     color: $headerSpan;
     font-family: $bodyFontFamily;
@@ -45,5 +44,14 @@
       border: 3px solid $btnPrimary;
     }
   }
-
+}
+.btn-box {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  font-size: 1.2vw;
+  margin-top: 1vw;
+  padding: 0.5vw;
+  background: $boxBtnBg;
+  color: $boxColor;
 }

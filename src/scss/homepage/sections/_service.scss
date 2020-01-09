@@ -1,0 +1,41 @@
+.service {
+  margin-top: -300px;
+  position: relative;
+
+  .service-heading {
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+    overflow: hidden;
+    height: 500px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: .9;
+    }
+
+    &:hover::before {
+      background: $serviceBgHover;
+      opacity: .9;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      color: $serviceHeadingColor;
+      font-size: 6vw;
+      text-shadow: 0 20px 30px black;
+    }
+  }
+}

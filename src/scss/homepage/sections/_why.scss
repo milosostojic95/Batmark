@@ -1,27 +1,91 @@
-.why {
+.why-batmark {
+  background: rgb(244, 244, 244);
+  padding-bottom: 400px;
 
   .why-wrapper {
-    display: flex;
-    padding-top: 10vw;
 
-    .left-part {
-      flex-basis: 30%;
-      padding: 250px 30px 0;
+    .why-box {
+      display: flex;
+      height: 200px;
+      margin-top: -100px;
+      position: relative;
+      box-shadow: 0 20px 30px grey;
 
-      p {
-        padding: 1vw 2vw 1vw 0;
+      .why-box-left {
+        background: white;
+        flex-basis: 50%;
+        font-family: $bodyFontFamily;
+
+        h2{
+          text-align: left;
+          color: $headerLogoColor;
+          text-transform: uppercase;
+          line-height: 150px;
+          margin-left: 50px;
+          font-size: 2.5vw;
+        }
+      }
+
+      .why-box-right{
+        background: $headerLogoColor;
+        flex-basis: 50%;
+        padding: 50px;
+
+        h2 {
+          text-align: center;
+          color: white;
+          text-transform: uppercase;
+          font-family: $bodyFontFamily;
+        }
       }
     }
 
-    .right-part {
-      flex-basis: 70%;
+    .why-content {
       display: flex;
       flex-wrap: wrap;
-      padding: 5vw .5vw;
+      margin-top: 4vw;
 
       .why-item {
         flex-basis: 33%;
-        padding: 20px 10px;
+        position: relative;
+        z-index: 1;
+        padding: 2vw 2vw;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: $boxBtnBg;
+          opacity: 0;
+          z-index: -1;
+        }
+
+        &:hover::before {
+          opacity: 1;
+        }
+
+        &:hover h3 {
+          color: $boxColor;
+        }
+
+        img {
+          height: 70px;
+          width: 70px;
+        }
+
+        h3 {
+          padding: 1vw 0;
+          text-transform: uppercase;
+          font-family: $bodyFontFamily;
+        }
+
+        p {
+          color: $whyTextColor;
+          line-height: 1.3;
+        }
       }
     }
   }
