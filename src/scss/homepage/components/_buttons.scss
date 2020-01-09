@@ -19,6 +19,8 @@
     @include breakpoint (desktop) {
       font-size: 1.1vw;
     }
+
+
   }
 
   .btn-second {
@@ -49,9 +51,50 @@
   display: block;
   margin: 0 auto;
   border: none;
-  font-size: 1.2vw;
-  margin-top: 1vw;
+  font-size: 1.1vw;
+  margin-top: 1.3vw;
   padding: 0.5vw;
   background: $boxBtnBg;
   color: $boxColor;
+  cursor: pointer;
+
+  @include breakpoint(smallTablet) {
+    font-size: 2.5vw;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 1.2vw;
+  }
+
+  @include breakpoint (desktop) {
+    font-size: 1.1vw;
+  }
+}
+
+.service-button {
+  display: flex;
+  justify-content: flex-end;
+  padding:0 3rem 5vw;
+  margin-right: 10px;
+
+  .service-btn {
+    font-size: 1.1vw;
+    padding: 0.5vw;
+    border: none;
+    background: $serviceBtnBg;
+    color: $serviceHeadingColor;
+
+
+    @include breakpoint(smallTablet) {
+      font-size: 2.5vw;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.2vw;
+    }
+
+    @include breakpoint (desktop) {
+      font-size: 1.1vw;
+    }
+  }
 }
