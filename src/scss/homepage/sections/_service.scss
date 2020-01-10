@@ -44,7 +44,7 @@
     h1 {
       position: absolute;
       color: $serviceHeadingColor;
-      font-size: 7vw;
+      font-size: 3vw;
       text-shadow: 0 20px 30px black;
 
       @include breakpoint (smallTablet) {
@@ -54,19 +54,23 @@
       }
 
       @include breakpoint(laptop) {
-        top: 45%;
+        top: 40%;
         left: 50%;
-        transform: translate(-50%,-45%);
+        transform: translate(-50%,-40%);
       }
     }
   }
 
   .service-content {
     background: $serviceBg;
-    margin-top: -205px;
 
     @include breakpoint(smallTablet) {
       clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+      margin-top: -200px;
+    }
+
+    @include breakpoint(tablet) {
+      margin-top: -250px;
     }
 
     @include breakpoint (laptop) {
@@ -75,6 +79,7 @@
 
     @include breakpoint (desktop) {
       clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+      margin-top: -350px;
     }
 
     .service-content-wrapper {
@@ -83,7 +88,7 @@
       padding-top: 10vw;
       justify-content: space-around;
       align-items: center;
-      padding: 10vw 3rem;
+      padding: 10vw 3rem 5vw;
 
       .service-item {
         flex-basis: 31%;
@@ -123,13 +128,13 @@
           left: 0;
           padding: 2vw;
 
-          h2 {
+          h3 {
             color: $serviceHeadingColor;
             margin-bottom: 2vw;
             font-size: 2.5vw;
 
             @include breakpoint (desktop) {
-              font-size: 2vw;
+              font-size: 1.5vw;
             }
           }
 
@@ -149,7 +154,7 @@
             }
 
             @include breakpoint(desktop) {
-              font-size: 1.1vw;
+              font-size: 1vw;
             }
           }
         }

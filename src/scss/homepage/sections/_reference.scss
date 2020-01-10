@@ -1,0 +1,54 @@
+.reference {
+  padding: 8vw 0;
+
+  h1 {
+    color: $serviceBg;
+    font-size: 3vw;
+    text-align: center;
+    padding: 2vw 0;
+  }
+
+  .reference-wrapper {
+    padding: 3vw 0;
+    position: relative;
+    box-shadow: 0 20px 50px grey;
+
+    .previous {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      a {
+        color: $serviceBg;
+      }
+    }
+
+    .next {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      a {
+        color: $serviceBg;
+      }
+    }
+
+    .reference-content {
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+
+      .reference-item {
+        flex-basis: 25%;
+        padding: 5vw 1vw;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

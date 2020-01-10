@@ -1,0 +1,45 @@
+.about {
+  height: 700px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0, 0, 0, .4) 30%,rgba(0, 0, 0, 1));
+  }
+
+
+  img {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+
+  }
+
+  .about-content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+
+    h1 {
+      text-align: center;
+      color: $serviceBg;
+      font-size: 3vw;
+      padding-bottom: 1vw;
+    }
+
+    p {
+
+      color: white;
+      text-align: center;
+      font-size: 1.1vw;
+      text-shadow: 0 20px 50px BLACK;
+    }
+  }
+}
