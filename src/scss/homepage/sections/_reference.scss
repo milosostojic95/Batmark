@@ -1,17 +1,20 @@
 .reference {
-  padding: 8vw 0;
+  padding: 8vw 0 15vw;
+  position: relative;
 
   h1 {
     color: $serviceBg;
     font-size: 3vw;
     text-align: center;
-    padding: 2vw 0;
+    padding: 2vw 0 5vw;
   }
 
   .reference-wrapper {
     padding: 3vw 0;
-    position: relative;
+
     box-shadow: 0 20px 50px grey;
+    width: 80%;
+    margin: 0 auto;
 
     .previous {
       position: absolute;
@@ -37,7 +40,7 @@
 
     .reference-content {
       display: flex;
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
 
       .reference-item {

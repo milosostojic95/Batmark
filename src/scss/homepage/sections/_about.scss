@@ -1,6 +1,21 @@
 .about {
-  height: 700px;
   position: relative;
+
+  @include breakpoint(smallTablet) {
+    height: 400px;
+  }
+
+  @include breakpoint(tablet) {
+    height: 500px;
+  }
+
+  @include breakpoint(laptop) {
+    height: 600px;
+  }
+
+  @include breakpoint(desktop) {
+    height: 700px;
+  }
 
   &::before {
     content: '';
@@ -9,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(rgba(0, 0, 0, .4) 30%,rgba(0, 0, 0, 1));
+    background: rgba(0,0,0,.7);
   }
 
 
@@ -23,9 +38,9 @@
 
   .about-content {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%,-30%);
+    transform: translate(-50%,-40%);
 
     h1 {
       text-align: center;
@@ -35,11 +50,30 @@
     }
 
     p {
-
       color: white;
       text-align: center;
-      font-size: 1.1vw;
       text-shadow: 0 20px 50px BLACK;
+      font-family: $bodyFontFamily;
+      line-height: 1.3;
+
+      @include breakpoint(smallTablet) {
+        font-size: 1.7vw;
+      }
+
+      @include breakpoint(tablet) {
+        font-size: 1.4vw;
+      }
+
+      @include breakpoint(laptop) {
+        font-size: 1.3vw;
+      }
+
+      @include breakpoint(desktop) {
+        font-size: 1.1vw;
+      }
+      &:last-of-type {
+        padding-bottom: 3vw;
+      }
     }
   }
 }
