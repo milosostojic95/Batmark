@@ -2,6 +2,51 @@
   margin-top: -100px;
   height: 50vh;
   position: relative;
+  margin-bottom: 5vw;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3vw;
+    color: white;
+  }
+}
+
+.service-home-heading {
+  height: 50vh;
+  position: relative;
+  margin-bottom: 4vw;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+  }
 
   img {
     height: 100%;
@@ -15,7 +60,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 4vw;
+    font-size: 3vw;
     color: white;
+    text-transform: uppercase;
+
+    span {
+      color: $serviceBg;
+    }
   }
 }
