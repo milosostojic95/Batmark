@@ -1,9 +1,18 @@
 .service-items-one {
 
+
+
   .service-page-item {
     display: flex;
     padding: 3vw 0;
 
+    @include breakpoint(smallTablet) {
+      padding: 3vw 3rem;
+    }
+
+    @include breakpoint(desktop) {
+      padding: 3vw;
+    }
 
     .service-image {
       flex-basis: 50%;
@@ -28,8 +37,19 @@
       padding: 2vw 0;
       font-family: $bodyFontFamily;
       line-height: 1.3;
-      font-size: .9vw;
       color: grey;
+
+      @include breakpoint(smallTablet) {
+        font-size: 1.5vw;
+      }
+
+      @include breakpoint(laptop) {
+        font-size: 1.3vw;
+      }
+
+      @include breakpoint(desktop) {
+        font-size: 1vw;
+      }
     }
   }
 }

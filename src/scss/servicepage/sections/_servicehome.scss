@@ -27,8 +27,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 3vw;
     color: white;
+
+    @include breakpoint(smallTablet) {
+      font-size: 4vw;
+    }
+
+    @include breakpoint(laptop) {
+      font-size: 3vw;
+    }
+
+    span {
+      color: $serviceBg;
+    }
   }
 }
 
@@ -60,9 +71,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 3vw;
     color: white;
     text-transform: uppercase;
+
+    @include breakpoint(smallTablet) {
+      font-size: 4vw;
+    }
+
+    @include breakpoint(laptop) {
+      font-size: 3vw;
+    }
 
     span {
       color: $serviceBg;
