@@ -1,0 +1,17 @@
+.service-page-item {
+  display: flex;
+  padding-top: 5vw;
+
+  .service-image {
+    flex-basis: 50%;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .service-text {
+    flex-basis: 50%;
+  }
+}

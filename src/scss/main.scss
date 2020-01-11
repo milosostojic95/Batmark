@@ -19,6 +19,14 @@
 @import './homepage/sections/reference';
 @import './homepage/sections/about';
 
+
+@import './servicepage/sections/servicehome';
+@import './servicepage/sections/serviceitems';
+
+
+@import './galleryhome/sections/galleryhome';
 // components
 
 @import './homepage/components/buttons';
+@import './servicepage/components/servicebutton';
+
