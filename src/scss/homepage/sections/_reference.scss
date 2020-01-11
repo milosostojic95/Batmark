@@ -2,55 +2,19 @@
   padding: 8vw 0 15vw;
   position: relative;
 
-  h1 {
-    color: $serviceBg;
-    font-size: 3vw;
-    text-align: center;
-    padding: 2vw 0 5vw;
-  }
-
-  .reference-wrapper {
-    padding: 3vw 0;
-
-    box-shadow: 0 20px 50px grey;
-    width: 80%;
+  .carousel-container {
+    width: 50%;
     margin: 0 auto;
+    border: 2px solid black;
+    overflow: hidden;
 
-    .previous {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-
-      a {
-        color: $serviceBg;
-      }
-    }
-
-    .next {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-
-      a {
-        color: $serviceBg;
-      }
-    }
-
-    .reference-content {
+    .carousel-slide {
       display: flex;
       width: 100%;
-      margin: 0 auto;
 
-      .reference-item {
-        flex-basis: 25%;
-        padding: 5vw 1vw;
-
-        img {
-          height: 100%;
-          width: 100%;
-        }
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
   }

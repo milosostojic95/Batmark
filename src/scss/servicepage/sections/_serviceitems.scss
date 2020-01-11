@@ -30,7 +30,18 @@
 
     h2 {
       color: $serviceBg;
-      font-size: 1.7vw;
+
+      @include breakpoint(smallTablet) {
+        font-size: 2.3vw;
+      }
+
+      @include breakpoint(laptop) {
+        font-size: 2vw;
+      }
+
+      @include breakpoint(desktop) {
+        font-size: 1.7vw;
+      }
     }
 
     p {
@@ -48,7 +59,7 @@
       }
 
       @include breakpoint(desktop) {
-        font-size: 1vw;
+        font-size: .9vw;
       }
     }
   }

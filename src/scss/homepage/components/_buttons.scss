@@ -60,11 +60,11 @@
   cursor: pointer;
 
   @include breakpoint(smallTablet) {
-    font-size: 2.5vw;
+    font-size: 1.5vw;
   }
 
   @include breakpoint(tablet) {
-    font-size: 1.2vw;
+    font-size: 1.3vw;
   }
 
   @include breakpoint (desktop) {
