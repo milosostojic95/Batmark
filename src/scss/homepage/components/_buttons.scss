@@ -99,3 +99,39 @@
     }
   }
 }
+.reference-btn {
+  margin-top: 1vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .previous-btn {
+    background: orangered;
+    font-size: 2vw;
+    padding: 0 1vw;
+    color: white;
+    border: none;
+
+    &:active {
+      position: relative;
+      top: -1px;
+      left: -1px;
+      transition: 1s;
+    }
+  }
+
+  .next-btn {
+    background: orangered;
+    border: none;
+    font-size: 2vw;
+    padding: 0 1vw;
+    color: white;
+
+    &:active {
+      position: relative;
+      top: -1px;
+      left: -1px;
+      transition: 1s;
+    }
+  }
+}

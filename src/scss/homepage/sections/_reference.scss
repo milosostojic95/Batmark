@@ -1,15 +1,35 @@
 .reference {
-  padding: 8vw 0 15vw;
+  padding: 0 0 15vw;
   position: relative;
+  overflow: hidden;
+  background: white;
+
+  h1 {
+    text-align: center;
+    font-size: 2.5vw;
+    padding-bottom: 5vw;
+    color: $serviceBg;
+  }
 
   .carousel-container {
-    margin: auto;
-    width: 60%;
+    margin: 0 auto;
     overflow: hidden;
+    background: white;
+    padding: 5vw 0;
+
+
 
     .carousel-slide {
       display: flex;
-      width: 300px;
+
+      img {
+        padding: 0 1vw;
+        opacity: .6;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 }
