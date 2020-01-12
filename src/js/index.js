@@ -1,5 +1,8 @@
 import '../scss/main.scss';
 
+
+// moving ref
+
 const carouselSlide =  document.querySelector('.carousel-slide');
 const carouselImages = document.querySelectorAll('.carousel-slide > img');
 // buttons
@@ -16,7 +19,7 @@ carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
 console.log(size)
 //
 nextBtn.addEventListener('click',()=>{
-  if(counter >= carouselImages.lenght - 7) return;
+  if(counter >= carouselImages.lenght - 1) return;
   carouselSlide.style.transition = 'transform 0.4s ease-in-out'
   carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
   counter ++;
@@ -41,3 +44,4 @@ carouselSlide.addEventListener('transitionend',()=>{
     carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
   }
 });
+

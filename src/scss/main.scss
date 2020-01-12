@@ -1,7 +1,9 @@
 @import './homepage/variables/home-variables';
+@import './servicepage/servicevariables/servicevariables';
+
+//global scss
 @import './base/base';
 @import './mixin/breakpoints';
-
 
 //fonts
 @import './base/fonts';
@@ -26,8 +28,8 @@
 
 
 @import './galleryhome/sections/galleryhome';
+
 // components
 
 @import './homepage/components/buttons';
-@import './servicepage/components/servicebutton';
 

@@ -54,7 +54,7 @@
   font-size: 1.1vw;
   margin-top: 1.3vw;
   padding: 1vw;
-  box-shadow: 0 2px 10px white;
+  box-shadow: 0 2px 10px $boxColor;
   background: $boxBtnBg;
   color: $boxColor;
   cursor: pointer;
@@ -106,10 +106,10 @@
   transform: translateX(-50%);
 
   .previous-btn {
-    background: orangered;
+    background: $referenceBtnBg;
     font-size: 2vw;
     padding: 0 1vw;
-    color: white;
+    color: $referenceBtnColor;
     border: none;
 
     &:active {
@@ -121,11 +121,11 @@
   }
 
   .next-btn {
-    background: orangered;
+    background: $referenceBtnBg;
     border: none;
     font-size: 2vw;
     padding: 0 1vw;
-    color: white;
+    color: $referenceBtnColor;
 
     &:active {
       position: relative;
