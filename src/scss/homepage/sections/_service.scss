@@ -1,26 +1,10 @@
 .service {
-  margin-top: -300px;
   position: relative;
   background: white;
 
   .service-heading {
     overflow: hidden;
     position: relative;
-    padding-bottom: 10vw;
-
-    @include breakpoint(smallTablet) {
-      clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
-    }
-
-    @include breakpoint (laptop) {
-      clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
-      padding-bottom: 5vw;
-    }
-
-    @include breakpoint (desktop) {
-      clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
-      padding-bottom: 0;
-    }
 
     &::before {
       content: '';
@@ -47,6 +31,14 @@
       color: $serviceHeadingColor;
       font-size: 3vw;
       text-shadow: 0 20px 30px black;
+      text-transform: uppercase;
+
+      @include breakpoint(mobile) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 6.5vw;
+      }
 
       @include breakpoint (smallTablet) {
         top: 30%;
@@ -64,24 +56,7 @@
 
   .service-content {
     background: $serviceBg;
-
-    @include breakpoint(smallTablet) {
-      clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
-      margin-top: -200px;
-    }
-
-    @include breakpoint(tablet) {
-      margin-top: -250px;
-    }
-
-    @include breakpoint (laptop) {
-      clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-    }
-
-    @include breakpoint (desktop) {
-      clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
-      margin-top: -350px;
-    }
+    margin-top: -20px;
 
     .service-content-wrapper {
       display: flex;
@@ -92,8 +67,16 @@
       padding: 10vw 3rem 5vw;
 
       .service-item {
-        flex-basis: 31%;
         position: relative;
+
+        @include breakpoint(mobile) {
+          flex-basis: 100%;
+          margin: 5vw 0;
+        }
+
+        @include breakpoint (smallTablet) {
+          flex-basis: 31%;
+        }
 
         &::before {
           content: '';
@@ -127,12 +110,16 @@
           position: absolute;
           top: 0;
           left: 0;
-          padding: 2vw;
+          padding: 5vw 8vw;
 
           h3 {
             color: $serviceHeadingColor;
             margin-bottom: 2vw;
             font-size: 2.5vw;
+
+            @include breakpoint(mobile) {
+              font-size: 4.5vw;
+            }
 
             @include breakpoint (desktop) {
               font-size: 1.5vw;
@@ -141,6 +128,11 @@
 
           p {
             color: $serviceTextColor;
+            padding: 3vw 0;
+
+            @include breakpoint(mobile) {
+              font-size: 4vw;
+            }
 
             @include breakpoint(smallTablet) {
               font-size: 1.9vw;

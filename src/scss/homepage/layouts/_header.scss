@@ -4,10 +4,18 @@
   z-index: 10;
   position: relative;
 
+  @include breakpoint(mobile) {
+    padding: 2vw 0;
+  }
+
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(mobile) {
+      padding: 0 2rem;
+    }
 
     @include breakpoint (smallTablet) {
       padding: 0 3rem;
@@ -24,6 +32,11 @@
 
         h1 {
           color: $headerLogoColor;
+
+          @include breakpoint(mobile) {
+            font-size: 6vw;
+          }
+
           @include breakpoint (smallTablet) {
             font-size: 3.5vw;
           }
