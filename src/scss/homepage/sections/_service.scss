@@ -24,6 +24,7 @@
 
     img {
       width: 100%;
+      height: 20vw;
     }
 
     h1 {
@@ -35,8 +36,8 @@
 
       @include breakpoint(mobile) {
         top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        left: 10%;
+        transform: translate(-10%,-50%);
         font-size: 6.5vw;
       }
 
@@ -48,8 +49,8 @@
 
       @include breakpoint(laptop) {
         top: 40%;
-        left: 50%;
-        transform: translate(-50%,-40%);
+        left: 30%;
+        transform: translate(-30%,-40%);
       }
     }
   }
