@@ -1,157 +1,31 @@
-.intro-buttons {
-  text-align: center;
-
-  .btn-primary {
-    background: $btnPrimary;
-    border: 2px solid white;
-    padding: .5vw;
-    margin-right: 20px;
-    color: $headerSpan;
-    border: 3px solid $btnPrimary;
-    font-family: $bodyFontFamily;
-    font-weight: 400;
-    cursor: pointer;
-    border-radius: 20px;
-
-    @include breakpoint(mobile) {
-      font-size: 3.5vw;
-      padding: 2vw 5vw;
-    }
-
-    @include breakpoint(tablet) {
-      font-size: 1.2vw;
-    }
-
-    @include breakpoint (desktop) {
-      font-size: 1.1vw;
-    }
-
-
-  }
-
-  .btn-second {
-    background: transparent;
-    border: 3px solid grey;
-    border-radius: 20px;
-    padding: .5vw;
-    margin-right: 20px;
-    color: $headerSpan;
-    font-family: $bodyFontFamily;
-    font-weight: 400;
-    cursor: pointer;
-
-    @include breakpoint(mobile) {
-      font-size: 3.5vw;
-      padding: 2vw 5vw;
-    }
-
-    @include breakpoint(tablet) {
-      font-size: 1.2vw;
-    }
-
-    @include breakpoint (desktop) {
-      font-size: 1.1vw;
-    }
-
-    &:hover {
-      background: $btnPrimary;
-      border: 3px solid $btnPrimary;
-    }
-  }
-}
-.btn-box {
+.hero-btn {
   display: block;
-  margin: 0 auto;
-  border-radius: 20px;
-  margin-bottom: 1vw;
-  background: transparent;
-  color: $boxColor;
-  cursor: pointer;
-  border: 2px solid white;
+  flex-basis: 100%;
+  margin-top: 1rem;
 
-  @include breakpoint(mobile) {
-    font-size: 3.5vw;
-    margin-bottom: 2vw;
-    padding: 2vw 8vw;
-  }
-
-  @include breakpoint(smallTablet) {
-    font-size: 1.5vw;
-  }
-
-  @include breakpoint(tablet) {
-    font-size: 1.3vw;
-  }
-
-  @include breakpoint (desktop) {
-    font-size: 1.1vw;
-  }
-}
-
-.service-button {
-  display: flex;
-  justify-content: center;
-  padding:0 3rem 10vw;
-
-
-  .service-btn {
-    border: none;
-    background: transparent;
-    color: $serviceHeadingColor;
-    border-radius: 20px;
-    border: 2px solid $serviceHeadingColor;
+  a {
+    background: $homeBtnBg;
+    color: $homeColor;
+    border-radius: 10px;
 
     @include breakpoint(mobile) {
-      font-size: 3.5vw;
-      padding: 2vw 8vw;
+      font-size: .95rem;
+      padding: .7rem 1.3rem;
     }
 
     @include breakpoint(smallTablet) {
-      font-size: 2.5vw;
+      font-size: 1rem;
+      padding: .7rem 1.7rem;
     }
 
-    @include breakpoint(tablet) {
-      font-size: 1.2vw;
+    @include breakpoint(laptop) {
+      font-size: 1rem;
+      padding: 1rem 2rem;
     }
 
-    @include breakpoint (desktop) {
-      font-size: 1.1vw;
-    }
-  }
-}
-.reference-btn {
-  margin-top: 1vw;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 
-  .previous-btn {
-    background: $referenceBtnBg;
-    font-size: 2vw;
-    padding: 0 1vw;
-    color: $referenceBtnColor;
-    border: none;
-
-    &:active {
-      position: relative;
-      top: -1px;
-      left: -1px;
-      transition: 1s;
-    }
-  }
-
-  .next-btn {
-    background: $referenceBtnBg;
-    border: none;
-    font-size: 2vw;
-    padding: 0 1vw;
-    color: $referenceBtnColor;
-
-    &:active {
-      position: relative;
-      top: -1px;
-      left: -1px;
-      transition: 1s;
+    svg {
+      margin-left: 10px;
     }
   }
 }

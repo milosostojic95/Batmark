@@ -46,7 +46,7 @@
           }
 
            span {
-            color: $headerLink;
+            color: $headerSpan;
           }
         }
       }
@@ -88,6 +88,7 @@
           font-family: $headingFontFamily;
           font-weight: 400;
           padding-right: 20px;
+
           @include breakpoint(smallTablet) {
             font-size: 1.7vw;
           }
