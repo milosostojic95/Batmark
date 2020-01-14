@@ -71,6 +71,7 @@
         span {
           font-size: 3vw;
           color: $aboutHeadingSpan;
+          margin-bottom: 2rem;
 
           @include breakpoint(mobile) {
             font-size: 2.375rem;

@@ -130,6 +130,10 @@
         height: 60%;
       }
 
+      @include breakpoint(laptop) {
+        height: 100%;
+      }
+
     }
   }
 }
