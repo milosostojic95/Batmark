@@ -1,15 +1,18 @@
 .slide-show {
   position: relative;
-  padding: 120px 0;
 
   @include breakpoint(mobile) {
     height: 100%;
-    padding: 120px 3rem;
+    padding: 120px 1rem;
+  }
+
+  @include breakpoint(smallTablet) {
+    padding: 120px 2rem;
   }
 
   @include breakpoint(laptop) {
-    padding: 120px 3rem;
-    height: 100vh;
+    padding: 120px 3rem 200px;
+    height: 100%;
   }
 
   h2 {

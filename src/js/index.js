@@ -1,7 +1,7 @@
 import '../scss/main.scss';
 
 
-// moving ref
+// slide
 
 const slides = document.querySelectorAll('.slide > .slide-item');
 const links = document.querySelectorAll('.nav-link');
@@ -27,5 +27,4 @@ function changeSlide(slidePage){
     });
   slides[slidePage].style.transform ='translateX(0)';
   slides[slidePage].style.transition ='.8s';
-
 };

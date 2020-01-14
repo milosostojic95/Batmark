@@ -4,9 +4,12 @@
 
 
   @include breakpoint(mobile) {
-    padding: 120px 3rem;
+    padding: 120px 1rem;
   }
 
+  @include breakpoint(smallTablet) {
+    padding: 120px 2rem;
+  }
 
   @include breakpoint(laptop) {
     padding: 120px 3rem;

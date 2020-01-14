@@ -1,26 +1,33 @@
+// fonts
 $bodyFontFamily: 'Orkney', sans-serif;
 $headingFontFamily: 'Wigrum', sans-serif;
 
+
+// header
 $headerLogoColor:  rgb(255, 66, 0);
 $headerSpan: rgb(153, 153, 153);
 $headerLink: rgb(153, 153, 153);
 
+
+//homeee
 $homeBtnBg: rgb(255, 66, 0);
 $homeColor: rgb(243,243,243);
 
-
+//why section
 $whyTextColor: rgb(153 ,153 ,153 );
 
 
-
-$serviceBgHover: rgb(255, 66, 0);
-$serviceBg: rgb(255, 66, 0);
+//service
 $serviceTextColor: rgb(153 ,153 ,153 );
-$serviceBtnBg: #000;
 
-$referenceBg: #fff;
-$referenceHeading: rgb(255, 66, 0);
-$referenceBtnColor: #fff;
-$referenceBtnBg: rgb(255, 66, 0);
+// about contact
+$aboutHeadingSpan: rgb(255, 66, 0);
+$aboutHeadingColor: #fff;
 
+//service
+$serviceBg:black;
 
+//footer
+$footerTextColor: #fff;
+$footerSpanColor: rgb(255, 66, 0);
+$footerSocialBg: rgb(255, 66, 0);

@@ -1,24 +1,120 @@
 .footer {
-  background: black;
+  background: rgb(102, 102, 102);
+  height: 100%;
+  padding: 5% 0 0;
 
-  .footer-content {
-    padding: 1.5vw 0;
+  @include breakpoint (mobile) {
+    padding: 5% 3rem 0;
+  }
 
-     h3 {
-      text-align: center;
-      color: white;
+  .footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+    position: relative;
 
-      @include breakpoint(smallTablet) {
-        font-size: 1.5vw;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background: grey;
+    }
+
+    .footer-content {
+
+      @include breakpoint(mobile) {
+        flex-basis: 100%;
+        padding: 2rem 0;
+        text-align: center;
       }
 
-      @include breakpoint(laptop) {
-        font-size: 1vw;
+      @include breakpoint(tablet) {
+        flex-basis: 33%;
+        padding: 0;
+        text-align: left;
       }
 
-      span {
-        color: $serviceBg;
+      h2{
+        color: $footerTextColor;
+
+        @include breakpoint(mobile) {
+          font-size: 2.275rem;
+        }
+
+        span {
+          color: $footerSpanColor;
+        }
       }
-     }
+
+      h5 {
+        color: $footerTextColor;
+        padding: 1rem 0;
+        font-size: 1.275rem;
+      }
+      p {
+        color: $footerTextColor;
+        font-size: 1.275rem;
+      }
+
+      .social-media {
+
+       ul {
+         display: flex;
+
+         @include breakpoint(mobile) {
+           width: 60%;
+           margin: 0 auto;
+         }
+
+         @include breakpoint(tablet) {
+           width: 100%;
+           margin: 0;
+         }
+
+        li {
+          list-style: none;
+          border-radius: 50%;
+          border: 1px solid $footerSocialBg;
+          background: $footerSocialBg;
+          margin-left: 20px;
+          width: 50px;
+          height: 50px;
+          position: relative;
+          cursor: pointer;
+
+          @include breakpoint(mobile) {
+            margin: 0 auto;
+          }
+
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+
+          a{
+            color: $footerSpanColor;
+
+            svg {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+            }
+          }
+        }
+       }
+      }
+    }
+  }
+
+  .copyright {
+
+    h5 {
+     font-size: 0.75rem;
+     line-height: 100px;
+     color: $footerTextColor;
+    }
   }
 }
