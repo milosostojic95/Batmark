@@ -1,158 +1,126 @@
-.service {
+.slide-show {
   position: relative;
-  background: white;
+  padding: 120px 0;
 
-  .service-heading {
-    overflow: hidden;
+  @include breakpoint(mobile) {
+    height: 100%;
+    padding: 120px 3rem;
+  }
+
+  @include breakpoint(laptop) {
+    padding: 120px 3rem;
+    height: 100vh;
+  }
+
+  h2 {
+    font-size: 3.375rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.875rem;
     position: relative;
 
     &::before {
       content: '';
       position: absolute;
+      background: orangered;
+      bottom: 0;
       left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: black;
-      opacity: .9;
-    }
-
-    &:hover::before {
-      background: $serviceBgHover;
-      opacity: .8;
-    }
-
-    img {
-      width: 100%;
-      height: 20vw;
-    }
-
-    h1 {
-      position: absolute;
-      color: $serviceHeadingColor;
-      font-size: 3vw;
-      text-shadow: 0 20px 30px black;
-      text-transform: uppercase;
-
-      @include breakpoint(mobile) {
-        top: 50%;
-        left: 10%;
-        transform: translate(-10%,-50%);
-        font-size: 6.5vw;
-      }
-
-      @include breakpoint (smallTablet) {
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%,-30%);
-      }
-
-      @include breakpoint(laptop) {
-        top: 40%;
-        left: 30%;
-        transform: translate(-30%,-40%);
-      }
+      height: 2px;
+      width: 90px;
     }
   }
 
-  .service-content {
-    background: $serviceBg;
-    margin-top: -20px;
+  .slides {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 2rem 0;
 
-    .service-content-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      padding-top: 10vw;
-      justify-content: space-around;
-      align-items: center;
-      padding: 10vw 3rem 5vw;
+    .slide {
+      position: relative;
 
-      .service-item {
-        position: relative;
+      @include breakpoint(mobile) {
+        flex-basis: 100%;
+      }
+
+      @include breakpoint(tablet) {
+        flex-basis: calc(100% - 100px);
+      }
+
+      .slide-item {
+        list-style: none;
 
         @include breakpoint(mobile) {
-          flex-basis: 100%;
-          margin: 5vw 0;
+          padding-right: 10%;
         }
 
-        @include breakpoint (smallTablet) {
-          flex-basis: 31%;
+        @include breakpoint(smallTablet) {
+          padding-right: 20%;
         }
 
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 99%;
-          width: 100%;
-          background: #000;
-          opacity: .6;
+         h3 {
+           font-size: 2.375rem;
+         }
+
+         p {
+           padding: 2rem 0;
+           font-size: 1.125rem;
+           line-height: 1.5;
+           color: $serviceTextColor;
+         }
+      }
+
+      .slide-2, .slide-3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+      }
+    }
+
+    .nav {
+      flex-basis: 100px;
+      position: relative;
+
+      @include breakpoint(mobile) {
+        display: flex;
+        flex-basis: 20%;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+
+      @include breakpoint(tablet) {
+        flex-basis: 100px;
+        display: block;
+
+      }
+
+      .nav-link {
+        text-indent: 200%;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-color: #d8d8d8;
+        border-radius: 50%;
+        margin-bottom: 10px;
+
+        @include breakpoint(mobile) {
+          margin-top: 4rem;
+          margin-left: 0;
+          margin-bottom: 0;
         }
 
-        img {
-          width: 100%;
-
-
-          @include breakpoint (smallTablet) {
-            height: 40vw;
-          }
-
-          @include breakpoint (tablet) {
-            height: 30vw;
-          }
-
-          @include breakpoint(desktop) {
-            height: 25vw;
-          }
+        @include breakpoint(tablet) {
+          margin-left: auto;
+          margin-top: 1rem;
         }
+      }
 
-        .service-item-content {
-          position: absolute;
-          top: 0;
-          left: 0;
-          padding: 5vw 8vw;
-
-          h3 {
-            color: $serviceHeadingColor;
-            margin-bottom: 2vw;
-            font-size: 2.5vw;
-
-            @include breakpoint(mobile) {
-              font-size: 4.5vw;
-            }
-
-            @include breakpoint (desktop) {
-              font-size: 1.5vw;
-            }
-          }
-
-          p {
-            color: $serviceTextColor;
-            padding: 3vw 0;
-
-            @include breakpoint(mobile) {
-              font-size: 4vw;
-            }
-
-            @include breakpoint(smallTablet) {
-              font-size: 1.9vw;
-            }
-
-            @include breakpoint (tablet) {
-              font-size: 1.5vw;
-            }
-
-            @include breakpoint (laptop) {
-              font-size: 1.3vw;
-            }
-
-            @include breakpoint(desktop) {
-              font-size: 1vw;
-            }
-          }
-        }
+      .active {
+        background-color: orangered;
       }
     }
   }
 }
+

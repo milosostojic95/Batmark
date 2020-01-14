@@ -3,45 +3,29 @@ import '../scss/main.scss';
 
 // moving ref
 
-const carouselSlide =  document.querySelector('.carousel-slide');
-const carouselImages = document.querySelectorAll('.carousel-slide > img');
-// buttons
-const prevBtn = document.querySelector('#previous');
-const nextBtn = document.querySelector('#next');
+const slides = document.querySelectorAll('.slide > .slide-item');
+const links = document.querySelectorAll('.nav-link');
 
-//counter
-let counter = 1;
-
-const size = carouselImages[0].clientWidth;
-
-carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
-
-console.log(size)
-//
-nextBtn.addEventListener('click',()=>{
-  if(counter >= carouselImages.lenght - 1) return;
-  carouselSlide.style.transition = 'transform 0.4s ease-in-out'
-  carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
-  counter ++;
+links.forEach((link,index)=>{
+  link.addEventListener('click',()=>{
+    changeDot(link);
+    changeSlide(index);
+  });
 });
 
-prevBtn.addEventListener('click',()=>{
-  if(counter <= 0) return;
-  carouselSlide.style.transition = 'transform 0.4s ease-in-out'
-  carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
-  counter --;
-});
+function changeDot(dot){
+  links.forEach((link)=>{
+    link.classList.remove('active');
+  });
+  dot.classList.add('active')
+};
 
-carouselSlide.addEventListener('transitionend',()=>{
-  if(carouselImages[counter].id === 'lastClone'){
-    carouselSlide.style.transition = 'none'
-    counter = carouselImages.length - 7;
-    carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
-  }
-  if(carouselImages[counter].id === 'firstClone'){
-    carouselSlide.style.transition = 'none'
-    counter = carouselImages.length - 17 ;
-    carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
-  }
-});
+function changeSlide(slidePage){
+  slides.forEach((slide)=>{
+    slide.style.transform= 'translateX(-100%)';
+    slide.style.transition='.2s';
+    });
+  slides[slidePage].style.transform ='translateX(0)';
+  slides[slidePage].style.transition ='.8s';
 
+};
