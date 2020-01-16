@@ -23,6 +23,10 @@ module.exports = {
       filename: 'gallery.html',
       template: './src/gallery.html'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'reference.html',
+      template: './src/reference.html'
+    }),
      new MiniCssExtractPlugin({
       filename: '[name].css'
     })

@@ -1,0 +1,22 @@
+.reference-images {
+  background: white;
+
+  .images-wrapper {
+    display: flex;
+    padding: 120px 0;
+
+    .ref-item {
+      flex-basis: 20%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        opacity: .7;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
