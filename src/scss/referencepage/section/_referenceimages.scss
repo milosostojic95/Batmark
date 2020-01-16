@@ -1,12 +1,30 @@
 .reference-images {
   background: white;
+  padding: 120px 0;
+
+  h2 {
+    font-size: 3vw;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: orangered;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 90px;
+    }
+  }
 
   .images-wrapper {
     display: flex;
+    flex-wrap: wrap;
     padding: 120px 0;
 
     .ref-item {
       flex-basis: 20%;
+      padding: 30px 10px;
 
       img {
         height: 100%;

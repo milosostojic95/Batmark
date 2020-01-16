@@ -1,5 +1,6 @@
 .slide-show {
   position: relative;
+  background: rgb(102, 102, 102);
 
   @include breakpoint(mobile) {
     height: 100%;

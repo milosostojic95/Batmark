@@ -9,9 +9,20 @@
       background: grey;
       padding: 8%;
 
-      h3 {
+      h1 {
         color: white;
-        font-size: 2vw;
+        font-size: 4vw;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background: orangered;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          width: 90px;
+        }
       }
 
       p {
