@@ -28,3 +28,6 @@ function changeSlide(slidePage){
   slides[slidePage].style.transform ='translateX(0)';
   slides[slidePage].style.transition ='.8s';
 };
+
+// validation
+

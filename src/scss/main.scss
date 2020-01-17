@@ -1,6 +1,8 @@
 @import './homepage/variables/home-variables';
 @import './servicepage/servicevariables/servicevariables';
 @import './referencepage/refvariable/refvariables';
+@import './contactpage/contactvariables/contactvariables';
+
 //global scss
 @import './base/base';
 @import './mixin/breakpoints';
@@ -32,6 +34,9 @@
 
 @import './referencepage/section/referenceintro';
 @import './referencepage/section/referenceimages';
+
+@import './contactpage/section/contactintro';
+@import './contactpage/section/contactmain';
 // components
 
 @import './homepage/components/buttons';

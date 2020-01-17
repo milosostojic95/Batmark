@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: $bodyFontFamily;
+  font-family: Arial, Helvetica, sans-serif;
   background: rgb(244,244,244);
 }
 
@@ -26,7 +26,7 @@ p {
   font-weight: 400;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: $headingFontFamily;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .loader-bg {
   background: black;

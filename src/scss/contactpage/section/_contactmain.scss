@@ -1,0 +1,38 @@
+.contact {
+  padding: 120px 0;
+
+  .contact-wrapper {
+    display: flex;
+
+    .contact-form {
+      flex-basis: 60%;
+      padding: 2rem;
+
+      form {
+
+        p {
+          padding: 1rem 0;
+        }
+
+        .form-control {
+          background: transparent;
+          font-size: 1.125rem;
+          width: 100%;
+          height: 50px;
+          border: 1px solid grey
+        }
+
+        .form-message {
+          height: 200px;
+          width: 100%;
+          border: 1px solid grey;
+          background: transparent;
+        }
+      }
+    }
+
+    .contact-map {
+      flex-basis: 40%;
+    }
+  }
+}

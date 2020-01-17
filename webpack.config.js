@@ -27,6 +27,10 @@ module.exports = {
       filename: 'reference.html',
       template: './src/reference.html'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'contact.html',
+      template: './src/contact.html'
+    }),
      new MiniCssExtractPlugin({
       filename: '[name].css'
     })

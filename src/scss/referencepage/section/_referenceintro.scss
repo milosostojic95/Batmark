@@ -2,7 +2,7 @@
 
   .reference-wrapper {
     display: flex;
-    height: 50vh;
+    height: 500px;
 
     .ref-left-part {
       flex-basis: 40%;
@@ -23,10 +23,6 @@
           height: 2px;
           width: 90px;
         }
-      }
-
-      p {
-        color: wheat;
       }
     }
 

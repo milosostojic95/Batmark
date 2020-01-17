@@ -2,9 +2,26 @@
   background: white;
   padding: 120px 0;
 
+  @include breakpoint(mobile) {
+    padding: 120px 1rem;
+  }
+
+  @include breakpoint(smallTablet) {
+    padding: 120px 2rem;
+  }
+
+  @include breakpoint(laptop) {
+    padding: 120px 3rem;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 120px 0rem;
+  }
+
   h2 {
-    font-size: 3vw;
+    font-size: 3.375rem;
     position: relative;
+
 
     &::before {
       content: '';
@@ -23,8 +40,19 @@
     padding: 120px 0;
 
     .ref-item {
-      flex-basis: 20%;
-      padding: 30px 10px;
+      padding: 30px 25px;
+
+      @include breakpoint(mobile) {
+        flex-basis: 50%;
+      }
+
+      @include breakpoint(smallTablet) {
+        flex-basis: 25%;
+      }
+
+      @include breakpoint(tablet) {
+        flex-basis: 20%;
+      }
 
       img {
         height: 100%;

@@ -2,14 +2,13 @@
 
   .service-page-item {
     display: flex;
-    padding: 3vw 0;
 
     @include breakpoint(smallTablet) {
       padding: 3vw 3rem;
     }
 
     @include breakpoint(desktop) {
-      padding: 3vw;
+      padding: 3vw 0;
     }
 
     .service-image {
@@ -23,41 +22,53 @@
 
     .service-text {
       flex-basis: 50%;
-      padding: 0 2vw;
-    }
+      padding: 0 3rem;
 
-    h2 {
-      color: $serviceBg;
+      h2 {
+        color: $serviceBg;
+        position: relative;
+        padding-bottom: 1rem;
 
-      @include breakpoint(smallTablet) {
-        font-size: 2.3vw;
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          width: 20%;
+          background: orangered;
+        }
+
+        @include breakpoint(smallTablet) {
+          font-size: 2.3vw;
+        }
+
+        @include breakpoint(laptop) {
+          font-size: 2vw;
+        }
+
+        @include breakpoint(desktop) {
+          font-size: 1.7vw;
+        }
       }
 
-      @include breakpoint(laptop) {
-        font-size: 2vw;
-      }
+      p {
+        margin: 2vw 0;
+        font-family: $bodyFontFamily;
+        line-height: 1.3;
+        color: grey;
 
-      @include breakpoint(desktop) {
-        font-size: 1.7vw;
-      }
-    }
+        @include breakpoint(smallTablet) {
+          font-size: 1.5vw;
+        }
 
-    p {
-      padding: 2vw 0;
-      font-family: $bodyFontFamily;
-      line-height: 1.3;
-      color: grey;
+        @include breakpoint(laptop) {
+          font-size: 1.3vw;
+        }
 
-      @include breakpoint(smallTablet) {
-        font-size: 1.5vw;
-      }
-
-      @include breakpoint(laptop) {
-        font-size: 1.3vw;
-      }
-
-      @include breakpoint(desktop) {
-        font-size: .9vw;
+        @include breakpoint(desktop) {
+          font-size: .9vw;
+        }
       }
     }
   }

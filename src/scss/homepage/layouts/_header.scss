@@ -1,12 +1,9 @@
 .main-nav {
-  padding: 1vw 0;
+  padding: 32px 0;
   background: transparent;
   z-index: 10;
   position: relative;
 
-  @include breakpoint(mobile) {
-    padding: 2vw 0;
-  }
 
   .navbar {
     display: flex;
@@ -22,6 +19,10 @@
     }
 
     @include breakpoint (laptop) {
+      padding: 0 3rem;
+    }
+
+    @include breakpoint(desktop) {
       padding: 0;
     }
 
@@ -53,20 +54,19 @@
     }
 
     .navbar-nav {
-      display: flex;
 
       @include breakpoint(mobile) {
         display: none;
       }
 
-      @include breakpoint(smallTablet) {
+      @include breakpoint(tablet) {
         display: flex;
       }
 
       .navbar-link {
         list-style: none;
         position: relative;
-        padding: .5vw 0;
+        padding: 0.5rem 0;
 
         &::before {
           position: absolute;
@@ -88,23 +88,23 @@
           font-family: $headingFontFamily;
           font-weight: 400;
           padding-right: 20px;
-
-          @include breakpoint(smallTablet) {
-            font-size: 1.7vw;
-          }
-
-          @include breakpoint (tablet) {
-            font-size: 1.3vw;
-          }
-
-          @include breakpoint(laptop) {
-            font-size: 1.1vw;
-          }
-
-          @include breakpoint (desktop){
-            font-size: 1vw;
-          }
+          font-size: 1.125rem;
         }
+      }
+    }
+
+    .menu-trigger {
+      width: 50px;
+      height: 50px;
+      background: red;
+      flex-wrap: wrap;
+
+      @include breakpoint(mobile) {
+        display: block;
+      }
+
+      @include breakpoint(tablet) {
+        display: none;
       }
     }
   }

@@ -1,17 +1,16 @@
 .intro-home {
   position: relative;
 
-
   @include breakpoint(mobile) {
-    height: calc(100vh - 130px);
+    height: calc(100vh - 119px);
   }
 
   @include breakpoint(tablet) {
-    height: calc(70vh - 130px);
+    height: calc(100vh - 119px);
   }
 
   @include breakpoint(laptop) {
-    height: calc(100vh - 130px);
+    height: calc(100vh - 119px);
   }
 
   .hero-content {
@@ -27,7 +26,7 @@
     align-items: center;
     color: $homeColor;
 
-    @include breakpoint(smallTablet) {
+    @include breakpoint(mobile) {
       width: 100%;
     }
 
@@ -40,7 +39,7 @@
       line-height: 1;
 
       @include breakpoint(mobile) {
-        font-size: 10vw;
+        font-size: 12vw;
       }
 
       @include breakpoint(smallTablet) {
@@ -61,10 +60,10 @@
       margin: 2rem 0;
 
       @include breakpoint(mobile) {
-        font-size: 5vw;
+        font-size: 7vw;
       }
 
-      @include breakpoint(mobile) {
+      @include breakpoint(smallTablet) {
         font-size: 3.5vw;
       }
 
@@ -109,7 +108,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    height: calc(100vh - 198px);
+    height: calc(100vh - 187px);
     z-index: 1;
 
     @include breakpoint(mobile) {
@@ -121,13 +120,17 @@
     }
 
     img {
-      background-position: center;
+      background-position: center center;
       background-size: cover;
       width: 100%;
       height: 100%;
 
+      @include breakpoint(mobile) {
+        height: 75%;
+      }
+
       @include breakpoint(tablet) {
-        height: 60%;
+        height: 100%;
       }
 
       @include breakpoint(laptop) {

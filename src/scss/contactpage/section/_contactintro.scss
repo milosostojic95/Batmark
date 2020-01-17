@@ -1,0 +1,39 @@
+.contact-intro {
+
+  .contact-wrapper {
+    display: flex;
+    height: 50vh;
+
+    .contact-left-part {
+      flex-basis: 60%;
+      position: relative;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+    }
+
+    .contact-right-part {
+      flex-basis: 40%;
+      padding: 5%;
+      background: grey;
+
+      h1 {
+        font-size: 4vw;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background: orangered;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          width: 90px;
+        }
+      }
+    }
+  }
+}
