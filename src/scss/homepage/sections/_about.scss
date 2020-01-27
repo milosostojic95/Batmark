@@ -4,8 +4,25 @@
   background-position: center center;
   background-attachment: fixed;
 
+  @include breakpoint(mobile) {
+    padding: 0 1rem;
+  }
+
+  @include breakpoint(smallTablet) {
+    padding: 0 2rem;
+  }
+
+  @include breakpoint(laptop) {
+    padding: 0 3rem;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0 0rem;
+  }
+
   .about-content {
     display: flex;
+    flex-wrap: wrap;
     padding: 10rem 0;
 
     .about-text {

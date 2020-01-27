@@ -1,6 +1,9 @@
 .slide-show {
   position: relative;
-  background: rgb(102, 102, 102);
+  background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/service/img3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 
   @include breakpoint(mobile) {
     height: 100%;
@@ -8,12 +11,12 @@
   }
 
   @include breakpoint(smallTablet) {
+    height: 100vh;
     padding: 120px 2rem;
   }
 
   @include breakpoint(laptop) {
-    padding: 120px 3rem 200px;
-    height: 100%;
+    padding: 120px 3rem 0;
   }
 
   h2 {
@@ -21,6 +24,7 @@
     padding-bottom: 1.5rem;
     margin-bottom: 1.875rem;
     position: relative;
+    color: white;
 
     &::before {
       content: '';
@@ -63,6 +67,7 @@
 
          h3 {
            font-size: 2.375rem;
+           color: white;
          }
 
          p {

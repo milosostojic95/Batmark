@@ -3,73 +3,15 @@
   height: 50vh;
   position: relative;
   margin-bottom: 5vw;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $servicePageBg;
-  }
-
-  img {
-    height: 100%;
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
-
-  }
+  background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url('../images/service/servicehome.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: $servicePageHeading;
-
-    @include breakpoint(smallTablet) {
-      font-size: 4vw;
-    }
-
-    @include breakpoint(laptop) {
-      font-size: 3vw;
-    }
-
-    span {
-      color: $servicePageSpan;
-    }
-  }
-}
-
-.service-home-heading {
-  height: 50vh;
-  position: relative;
-  margin-bottom: 4vw;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $servicePageBg;
-  }
-
-  img {
-    height: 100%;
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
-  }
-
-  h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     color: $servicePageHeading;
     text-transform: uppercase;
 
@@ -79,6 +21,50 @@
 
     @include breakpoint(laptop) {
       font-size: 3vw;
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 2.5vw;
+    }
+
+    span {
+      color: $servicePageSpan;
+    }
+  }
+}
+
+.service-home-heading {
+  background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url('../images/service/img3.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+
+  h1 {
+    color: $servicePageHeading;
+    text-transform: uppercase;
+    padding: 12rem 0;
+
+    @include breakpoint(mobile) {
+      font-size: 5vw;
+      padding: 12rem 1rem;
+    }
+
+    @include breakpoint(smallTablet) {
+      font-size: 4vw;
+      padding: 12rem 0;
+    }
+
+    @include breakpoint(laptop) {
+      font-size: 3vw;
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 2.5vw;
     }
 
     span {
