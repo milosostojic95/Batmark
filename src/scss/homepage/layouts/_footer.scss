@@ -51,60 +51,54 @@
 
       h5 {
         color: $footerTextColor;
-        padding: 1rem 0;
-        font-size: 1.275rem;
+        padding: 1rem 0 0.7rem;
+        font-size: 0.9rem;
       }
       p {
         color: $footerTextColor;
-        font-size: 1.275rem;
+        font-size: 0.9rem;
       }
 
       .social-media {
 
-       ul {
-         display: flex;
-
-         @include breakpoint(mobile) {
-           width: 60%;
-           margin: 0 auto;
-         }
-
-         @include breakpoint(tablet) {
-           width: 100%;
-           margin: 0;
-         }
-
-        li {
-          list-style: none;
-          border-radius: 50%;
-          border: 1px solid $footerSocialBg;
-          background: $footerSocialBg;
-          margin-left: 20px;
-          width: 50px;
-          height: 50px;
-          position: relative;
-          cursor: pointer;
+        ul {
+          display: flex;
 
           @include breakpoint(mobile) {
-            margin: 0 auto;
+            justify-content: space-around;
           }
 
-          &:nth-child(1) {
-            margin-left: 0;
+          @include breakpoint(smallTablet) {
+            justify-content: flex-start;
           }
 
-          a{
-            color: $footerSpanColor;
+          li {
+            list-style: none;
+            border-radius: 50%;
+            border: 1px solid $footerSocialBg;
+            background: $footerSocialBg;
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            position: relative;
+            cursor: pointer;
 
-            svg {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%,-50%);
+            &:first-child {
+              margin-left: 0;
+            }
+
+            a{
+              color: $footerSpanColor;
+
+              svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+              }
             }
           }
         }
-       }
       }
     }
   }

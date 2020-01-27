@@ -1,57 +1,16 @@
 .about {
-  position: relative;
-
-  @include breakpoint(mobile) {
-    height: 80vh;
-  }
-
-  @include breakpoint(smallTablet) {
-    height: 40vh;
-  }
-
-  @include breakpoint(tablet) {
-    height: 60vh;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.7);
-  }
-
-
-  img {
-    height: 100%;
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
-
-  }
+  background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url('../images/home/about.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 
   .about-content {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-40%);
-    width: 65%;
     display: flex;
-    flex-wrap: wrap;
-
-    @include breakpoint(mobile) {
-      width: 85%;
-    }
-
-    @include breakpoint(desktop) {
-      width: 65%;
-    }
+    padding: 10rem 0;
 
     .about-text {
       flex-basis: 70%;
-      padding-right: 10%;
+      padding-right: 15%;
 
       @include breakpoint(mobile) {
         flex-basis: 100%;
@@ -62,21 +21,16 @@
       }
 
       h2 {
-        text-align: center;
+        font-size: 2.3rem;
         color: $serviceBg;
-        font-size: 2rem;
         text-align: left;
+        color: $aboutHeadingSpan;
+      }
+
+      p {
+        font-size: 1.125rem;
         color: $aboutHeadingColor;
-
-        span {
-          font-size: 3vw;
-          color: $aboutHeadingSpan;
-          margin-bottom: 2rem;
-
-          @include breakpoint(mobile) {
-            font-size: 2.375rem;
-          }
-        }
+        padding: 1rem 0 0;
       }
     }
   }
