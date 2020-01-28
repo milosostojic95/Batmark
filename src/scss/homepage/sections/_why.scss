@@ -100,11 +100,25 @@
 
   .right-part-why {
     flex-basis: 30%;
-    background-image: url('../images/home/iphone.png');
+    background-image: url('../images/home/iphonebg.png');
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url('../images/home/iphone.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      overflow: hidden;
+    }
 
     @include breakpoint (mobile) {
       display: none;

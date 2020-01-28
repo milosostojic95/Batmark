@@ -3,10 +3,17 @@
 
   .contact-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 
     .contact-form {
       flex-basis: 60%;
-      padding: 2rem;
+      padding: 0 2rem;
+
+      h1 {
+        text-transform: uppercase;
+        font-size: 2.2rem;
+      }
 
       form {
 
@@ -31,8 +38,30 @@
       }
     }
 
-    .contact-map {
+    .contact-information {
       flex-basis: 40%;
+
+      .contact-map {
+        box-shadow: 0 2px 5px black;
+        height: 50%;
+
+        iframe {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .contact-inf {
+
+        h2 {
+          margin: .5rem 0;
+          text-transform: uppercase;
+        }
+
+        p {
+          color: grey;
+        }
+      }
     }
   }
 }
