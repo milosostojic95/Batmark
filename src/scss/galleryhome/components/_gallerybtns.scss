@@ -1,23 +1,13 @@
-.img-btn-next {
-  display: block;
-  padding: 6px 10px;
-  border-radius: 4px;
-  background-color: #111111;
-  position: fixed;
-  top: 48vh;
-  z-index: 500;
-  color: white;
-  cursor: pointer;
-}
 
-.img-btn-prev {
-  display: block;
+.close-btn {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  color: white;
+  z-index: 500;
+  background-color: #111111;
+  text-transform: uppercase;
   padding: 6px 10px;
   border-radius: 4px;
-  background-color: #111111;
-  position: fixed;
-  top: 48vh;
-  z-index: 500;
-  color: white;
-  cursor: pointer;
+  font-size: 25px;
 }

@@ -1,6 +1,6 @@
 .gallery {
   margin-top: -150px;
-  background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/gallery/gallery.jpg');
+  background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('../images/gallery/gallery.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,6 +21,7 @@
     grid-template-areas:
     "img1 img2 img3 img4"
     "img5 img6 img3 img7";
+    margin-top: 5rem;
 
     .gallery-item {
       width: 100%;
@@ -55,38 +56,38 @@
 
     .img1 {
       grid-area: img1;
-      background-image: url('../images/gallery/brizganje.jpg');
+      background-image: url('../images/gallery/img1.jpg');
     }
 
     .img2 {
       grid-area: img2;
-      background-image: url('../images/gallery/brizganje.jpg');
+      background-image: url('../images/gallery/img2.jpg');
     }
 
     .img3 {
       grid-area: img3;
-      background-image: url('../images/gallery/brizganje.jpg');
+      background-image: url('../images/gallery/img3.jpg');
       height: 610px;
     }
 
     .img4 {
       grid-area: img4;
-      background-image: url('../images/gallery/brizganje.jpg');
+      background-image: url('../images/gallery/img4.jpg');
     }
 
     .img5 {
       grid-area: img5;
-      background-image: url('../images/gallery/brizganje.jpg');
+      background-image: url('../images/gallery/img5.jpg');
     }
 
     .img6 {
       grid-area: img6;
-      background-image: url('../images/gallery/brizganje.jpg');
+      background-image: url('../images/gallery/img6.jpg');
     }
 
     .img7 {
       grid-area: img7;
-      background-image: url('../images/gallery/brizganje.jpg');
+      background-image: url('../images/gallery/img7.jpg');
     }
   }
 }
@@ -95,7 +96,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,.9);
+  background-color: rgba(0,0,0,.97);
   top: 0;
   left: 0;
   cursor: pointer;
