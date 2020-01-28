@@ -38,17 +38,19 @@ let windowWidth = window.innerWidth;
 if(galleryImages) {
   galleryImages.forEach((image)=>{
     image.addEventListener('click',()=>{
-// taking img src from css
+      // taking img src from css
       let getElementCss = window.getComputedStyle(image);
       let getFullImgUrl = getElementCss.getPropertyValue('background-image');
       let getImgUrlPos = getFullImgUrl.split('/images/');
       let setNewImgUrl = getImgUrlPos[1].replace('")','');
 
+      //create div element for image
       let container = document.body;
       let newImgWindow = document.createElement('div');
       container.appendChild(newImgWindow);
       newImgWindow.setAttribute('class', 'img-window');
 
+      // create clobe btn
       let closeBtn = document.createElement('a');
       let newCloseText = document.createTextNode('x');
       closeBtn.appendChild(newCloseText);
@@ -65,10 +67,31 @@ if(galleryImages) {
           newImgWindow.remove();
         }
       })
-
+      // adding src of image to element
       let newImg = document.createElement('img');
       newImgWindow.appendChild(newImg);
-      newImg.setAttribute('src','../images/' +setNewImgUrl);
+      newImg.setAttribute('src','../images/'+setNewImgUrl);
     });
   });
 }
+
+//menu tigger
+
+const menuBtn = document.querySelector('.menu-trigger');
+const navBar = document.querySelector('.navbar-nav')
+
+menuBtn.addEventListener('click', ()=>{
+  navBar.style.transform = 'translateY(0)';
+
+  let closeBtn = document.createElement('a');
+  let closeBtnText = document.createTextNode('x');
+  closeBtn.appendChild(closeBtnText);
+  closeBtn.setAttribute('class','close-btn')
+  navBar.appendChild(closeBtn);
+
+
+  //closing navbar
+  closeBtn.addEventListener('click',()=>{
+    navBar.style.transform = 'translateY(-100%)';
+  });
+});

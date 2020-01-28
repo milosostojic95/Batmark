@@ -47,7 +47,6 @@
   h1 {
     color: $servicePageHeading;
     text-transform: uppercase;
-    padding: 12rem 0;
 
     @include breakpoint(mobile) {
       font-size: 5vw;
