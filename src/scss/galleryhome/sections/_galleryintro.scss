@@ -7,15 +7,15 @@
   background-attachment: fixed;
 
   @include breakpoint(mobile) {
-    padding: 120px 1rem;
+    padding: 150px 1rem;
   }
 
   @include breakpoint(smallTablet) {
-    padding: 120px 2rem;
+    padding: 150px 2rem;
   }
 
   @include breakpoint(laptop) {
-    padding: 120px 3rem;
+    padding: 150px 3rem;
   }
 
   @include breakpoint(desktop) {
@@ -25,10 +25,13 @@
   h1 {
     text-align: center;
     color: $headingColor;
-    font-size: 4vw;
+
+    @include breakpoint(mobile) {
+      font-size: 7.5vw;
+    }
 
     @include breakpoint(smallTablet) {
-      font-size: 4vw;
+      font-size: 4.5vw;
     }
 
     @include breakpoint(laptop) {
