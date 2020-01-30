@@ -36,3 +36,23 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 400;
 }
 
+.preloader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  transition: opacity .5s ease;
+
+  h1 {
+    color: white;
+  }
+}
+
+.loader-finish {
+  opacity: 0;
+  pointer-events: none;
+}

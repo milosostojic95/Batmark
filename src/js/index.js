@@ -89,9 +89,17 @@ menuBtn.addEventListener('click', ()=>{
   closeBtn.setAttribute('class','close-btn')
   navBar.appendChild(closeBtn);
 
-
   //closing navbar
   closeBtn.addEventListener('click',()=>{
     navBar.style.transform = 'translateY(-100%)';
   });
+});
+
+
+
+
+// type metod
+window.addEventListener('load',() =>{
+  const preloader = document.querySelector('.preloader');
+  preloader.classList.add('loader-finish');
 });
