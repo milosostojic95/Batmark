@@ -166,7 +166,7 @@ function scrollApper() {
     textAnim.style.opacity = '1';
     textAnim.style.transform = 'translateY(0)';
     mobileAnim.style.opacity = '1';
-    mobileAnim.style.transform = 'translateX(0)';
+    mobileAnim.style.transform = 'translateY(0)';
   }
  if(servicePosition < screenPosition) {
     slideAnim.style.opacity = '1';
