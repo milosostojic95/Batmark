@@ -22,7 +22,8 @@
   .left-part-why {
     padding-right: 5vw;
     opacity: 0;
-    transition: opacity .5s ease;
+    transform: translateY(50px);
+    transition: .5s all ease-in-out;
 
     @include breakpoint(mobile) {
       flex-basis: 100%;
@@ -107,6 +108,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: .7s all ease;
 
     &::before {
       content: '';
