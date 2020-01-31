@@ -21,6 +21,8 @@
 
   .left-part-why {
     padding-right: 5vw;
+    opacity: 0;
+    transition: opacity .5s ease;
 
     @include breakpoint(mobile) {
       flex-basis: 100%;
