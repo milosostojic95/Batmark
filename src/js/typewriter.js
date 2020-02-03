@@ -1,5 +1,4 @@
-
-export default class typeWriter {
+ class typeWriter {
   constructor(txtElement, words, wait) {
     this.txtElement = txtElement;
     this.txt =  '';
@@ -39,3 +38,11 @@ export default class typeWriter {
     setTimeout(() =>this.type(), typeSpeed);
   }
 }
+
+export default function textWriter() {
+  const txtElement = document.querySelector('.txt-type');
+  const words = JSON.parse(txtElement.getAttribute('data-words'));
+  const wait = txtElement.getAttribute('data-wait');
+
+  new typeWriter(txtElement, words, wait);
+};

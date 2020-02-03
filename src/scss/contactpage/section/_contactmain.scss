@@ -40,23 +40,35 @@
 
       form {
 
-        p {
-          padding: 1rem 0;
-        }
+        .form-group {
+          position: relative;
+          padding-top: 16px;
+          margin-bottom: 1rem;
 
-        .form-control {
-          background: transparent;
-          font-size: 1.125rem;
-          width: 100%;
-          height: 50px;
-          border: 1px solid grey
-        }
+          .input-text {
+            display: block;
+            width: 100%;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $contactBorder;
+            font-size: 1.125rem;
 
-        .form-message {
-          height: 200px;
-          width: 100%;
-          border: 1px solid grey;
-          background: transparent;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          label {
+            position: absolute;
+            top: 19px;
+            left: 0;
+            font-family: $bodyFontFamily;
+            transition: all .3s;
+            font-size: 18px;
+            color: $contactBorder;
+          }
         }
       }
     }

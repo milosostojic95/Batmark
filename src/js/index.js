@@ -1,17 +1,12 @@
 import '../scss/main.scss';
-import typeWriter from './typewriter';
+import textWriter from './typewriter';
 import scrollApper from './scrollanim';
 import menuTrigger from './menutrigger';
 import {changeDot, changeSlide} from './slide';
 
-// type witer
-document.addEventListener('DOMContentLoaded',() => {
-  const txtElement = document.querySelector('.txt-type');
-  const words = JSON.parse(txtElement.getAttribute('data-words'));
-  const wait = txtElement.getAttribute('data-wait');
 
-  new typeWriter(txtElement, words, wait);
-});
+// type witer
+document.addEventListener('DOMContentLoaded',textWriter);
 
 //scroll animation
 
@@ -85,6 +80,16 @@ window.addEventListener('load',() =>{
   preloader.classList.add('loader-finish');
 });
 
+// contact animation
+const contactText = document.querySelectorAll('.form-control');
+const labelText = document.querySelectorAll('label')
+
+contactText.forEach((form,index) => {
+  form.addEventListener('click',function() {
+    labelText[index].style.top = '0px';
+    labelText[index].style.fontSize = '16px';
+  });
+})
 
 
 
