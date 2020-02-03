@@ -31,6 +31,8 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "gsap": "^3.1.1",
+    "scrollmagic-plugin-gsap": "^1.0.4"
   }
 }

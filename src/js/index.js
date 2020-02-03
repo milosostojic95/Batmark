@@ -1,9 +1,28 @@
 import '../scss/main.scss';
+import typeWriter from './typewriter';
+import scrollApper from './scrollanim';
+import menuTrigger from './menutrigger';
+import {changeDot, changeSlide} from './slide';
 
+// type witer
+document.addEventListener('DOMContentLoaded',() => {
+  const txtElement = document.querySelector('.txt-type');
+  const words = JSON.parse(txtElement.getAttribute('data-words'));
+  const wait = txtElement.getAttribute('data-wait');
 
-// slide
+  new typeWriter(txtElement, words, wait);
+});
 
-const slides = document.querySelectorAll('.slide > .slide-item');
+//scroll animation
+
+window.addEventListener('scroll', scrollApper);
+
+// MENU TRIGGER
+const menuBtn = document.querySelector('.menu-trigger');
+
+menuBtn.addEventListener('click', menuTrigger);
+
+// SLIDER
 const links = document.querySelectorAll('.nav-link');
 
 links.forEach((link,index)=>{
@@ -13,21 +32,6 @@ links.forEach((link,index)=>{
   });
 });
 
-function changeDot(dot){
-  links.forEach((link)=>{
-    link.classList.remove('active');
-  });
-  dot.classList.add('active')
-};
-
-function changeSlide(slidePage){
-  slides.forEach((slide)=>{
-    slide.style.opacity= '0';
-    slide.style.transition='.2s';
-    });
-  slides[slidePage].style.opacity ='1';
-  slides[slidePage].style.transition ='.8s';
-};
 
 //gallery popup
 
@@ -75,103 +79,13 @@ if(galleryImages) {
   });
 }
 
-//menu tigger
-
-const menuBtn = document.querySelector('.menu-trigger');
-const navBar = document.querySelector('.navbar-nav')
-
-menuBtn.addEventListener('click', ()=>{
-  navBar.style.transform = 'translateY(0)';
-
-  let closeBtn = document.createElement('a');
-  let closeBtnText = document.createTextNode('x');
-  closeBtn.appendChild(closeBtnText);
-  closeBtn.setAttribute('class','close-btn')
-  navBar.appendChild(closeBtn);
-
-  //closing navbar
-  closeBtn.addEventListener('click',()=>{
-    navBar.style.transform = 'translateY(-100%)';
-  });
-});
-
-
-
-
+// preloader
 window.addEventListener('load',() =>{
   const preloader = document.querySelector('.preloader');
   preloader.classList.add('loader-finish');
 });
 
 
-//text animation
 
-class typeWriter {
-  constructor(txtElement, words, wait) {
-    this.txtElement = txtElement;
-    this.txt =  '';
-    this.words = words;
-    this.wordIndex = 0;
-    this.isDeleting = false;
-    this.type();
-    this.wait = wait;
-  }
 
-  type() {
-    const current = this.wordIndex % this.words.length;
-    const fullTxt = this.words[current];
-    let typeSpeed = 100;
 
-    if(this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-    if(this.isDeleting) {
-      typeSpeed /= 2;
-    }
-
-    if(!this.isDeleting && this.txt === fullTxt) {
-      typeSpeed = this.wait;
-      this.isDeleting = true;
-    }
-    else if(this.isDeleting && this.txt === '') {
-      this.isDeleting = false;
-      this.wordIndex ++;
-      typeSpeed = 500;
-    }
-
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-    setTimeout(() =>this.type(), typeSpeed);
-  }
-}
-document.addEventListener('DOMContentLoaded',() => {
-  const txtElement = document.querySelector('.txt-type');
-  const words = JSON.parse(txtElement.getAttribute('data-words'));
-  const wait = txtElement.getAttribute('data-wait');
-
-  new typeWriter(txtElement, words, wait);
-});
-
-function scrollApper() {
-  const textAnim = document.querySelector('.left-part-why');
-  const mobileAnim = document.querySelector('.right-part-why');
-  const slideAnim = document.querySelector('.slides');
-  const whyPosition = textAnim.getBoundingClientRect().top;
-  const servicePosition = slideAnim.getBoundingClientRect().top;
-  const screenPosition = window.innerHeight / 1.4;
-  console.log(screenPosition)
-  if(whyPosition < screenPosition) {
-    textAnim.style.opacity = '1';
-    textAnim.style.transform = 'translateY(0)';
-    mobileAnim.style.opacity = '1';
-    mobileAnim.style.transform = 'translateY(0)';
-  }
- if(servicePosition < screenPosition) {
-    slideAnim.style.opacity = '1';
-    slideAnim.style.transform = 'translateY(0)';
-  }
-};
-
-window.addEventListener('scroll', scrollApper);
