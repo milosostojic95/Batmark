@@ -10,12 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   else {
     textWriter();
+    document.addEventListener('scroll', scrollApper);
   }
 });
-
-document.addEventListener('scroll', scrollApper);
-
-
 
 // SLIDER
 const links = document.querySelectorAll('.nav-link');
