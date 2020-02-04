@@ -11,3 +11,25 @@
   border-radius: 4px;
   font-size: 25px;
 }
+
+.img-btn-next {
+  display: block;
+  position: fixed;
+  top: 50%;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: #111111;
+  z-index: 500;
+  color: white;
+}
+
+.img-btn-prev {
+  display: block;
+  position: fixed;
+  top: 50%;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: #111111;
+  z-index: 500;
+  color: white;
+}
