@@ -68,3 +68,29 @@
     }
   }
 }
+
+.form-btn {
+  background-color: $homeBtnBg;
+  border: none;
+  color: white;
+  border-radius: 10px;
+
+  @include breakpoint(mobile) {
+    font-size: .95rem;
+    padding: .7rem 1.3rem;
+  }
+
+  @include breakpoint(smallTablet) {
+    font-size: 1rem;
+    padding: .7rem 1.7rem;
+  }
+
+  @include breakpoint(laptop) {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  svg {
+    margin-left: 10px;
+  }
+}

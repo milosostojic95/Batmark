@@ -45,6 +45,12 @@
           padding-top: 16px;
           margin-bottom: 1rem;
 
+          .focused {
+            height: 100px;
+            width: 100%;
+            background-color: blueviolet;
+          }
+
           .input-text {
             display: block;
             width: 100%;

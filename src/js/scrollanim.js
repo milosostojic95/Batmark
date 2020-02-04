@@ -3,8 +3,10 @@ export default function scrollApper() {
   const textAnim = document.querySelector('.left-part-why');
   const mobileAnim = document.querySelector('.right-part-why');
   const slideAnim = document.querySelector('.slides');
+  const refAnim = document.querySelector('.images-wrapper');
   const whyPosition = textAnim.getBoundingClientRect().top;
   const servicePosition = slideAnim.getBoundingClientRect().top;
+  const refPosition = refAnim.getBoundingClientRect().top;
   const screenPosition = window.innerHeight / 1.4;
 
   if(whyPosition < screenPosition) {
@@ -16,5 +18,9 @@ export default function scrollApper() {
  if(servicePosition < screenPosition) {
     slideAnim.style.opacity = '1';
     slideAnim.style.transform = 'translateY(0)';
+  }
+  if(refPosition < screenPosition) {
+    refAnim.style.opacity= '1';
+    refAnim.style.transform = 'translateY(0)';
   }
 };

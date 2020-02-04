@@ -4,17 +4,19 @@ import scrollApper from './scrollanim';
 import menuTrigger from './menutrigger';
 import {changeDot, changeSlide} from './slide';
 
+if(window.location.pathname == '/index.html') {
+  //scroll animation
+  window.addEventListener('scroll', scrollApper);
+  //type writter- text animation on home page
+  document.addEventListener('DOMContentLoaded',textWriter);
+}
 
-// type witer
-document.addEventListener('DOMContentLoaded',textWriter);
-
-//scroll animation
-
-window.addEventListener('scroll', scrollApper);
+if(window.location.pathname == '/reference.html') {
+  window.addEventListener('scroll', scrollApper);
+}
 
 // MENU TRIGGER
 const menuBtn = document.querySelector('.menu-trigger');
-
 menuBtn.addEventListener('click', menuTrigger);
 
 // SLIDER
@@ -82,7 +84,7 @@ window.addEventListener('load',() =>{
 
 // contact animation
 const contactText = document.querySelectorAll('.form-control');
-const labelText = document.querySelectorAll('label')
+const labelText = document.querySelectorAll('label');
 
 contactText.forEach((form,index) => {
   form.addEventListener('click',function() {

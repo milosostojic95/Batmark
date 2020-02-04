@@ -38,6 +38,9 @@
     display: flex;
     flex-wrap: wrap;
     padding: 120px 0;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all .5s ease;
 
     .ref-item {
       padding: 30px 25px;

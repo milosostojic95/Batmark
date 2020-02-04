@@ -1,4 +1,5 @@
- class typeWriter {
+
+class typeWriter {
   constructor(txtElement, words, wait) {
     this.txtElement = txtElement;
     this.txt =  '';
