@@ -1,23 +1,21 @@
 import '../scss/main.scss';
 import textWriter from './typewriter';
 import scrollApper from './scrollanim';
-import menuTrigger from './menutrigger';
 import {changeDot, changeSlide} from './slide';
 
-if(window.location.pathname == '/index.html') {
-  //scroll animation
-  window.addEventListener('scroll', scrollApper);
-  //type writter- text animation on home page
-  document.addEventListener('DOMContentLoaded',textWriter);
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const accordion = document.getElementById('accordion');
+  if(!accordion) {
+    return;
+  }
+  else {
+    textWriter();
+  }
+});
 
-if(window.location.pathname == '/reference.html') {
-  window.addEventListener('scroll', scrollApper);
-}
+document.addEventListener('scroll', scrollApper);
 
-// MENU TRIGGER
-const menuBtn = document.querySelector('.menu-trigger');
-menuBtn.addEventListener('click', menuTrigger);
+
 
 // SLIDER
 const links = document.querySelectorAll('.nav-link');
@@ -28,8 +26,6 @@ links.forEach((link,index)=>{
     changeSlide(index);
   });
 });
-
-
 //gallery popup
 
 let galleryImages = document.querySelectorAll('.gallery-item');
@@ -75,7 +71,6 @@ if(galleryImages) {
     });
   });
 }
-
 // preloader
 window.addEventListener('load',() =>{
   const preloader = document.querySelector('.preloader');
