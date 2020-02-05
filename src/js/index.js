@@ -30,7 +30,7 @@ let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
 
 if(galleryImages) {
-  galleryImages.forEach((image)=>{
+  galleryImages.forEach((image, index)=>{
     image.addEventListener('click',()=>{
       // taking img src from css
       let getElementCss = window.getComputedStyle(image);
@@ -38,23 +38,19 @@ if(galleryImages) {
       let getImgUrlPos = getFullImgUrl.split('/images/');
       let setNewImgUrl = getImgUrlPos[1].replace('")','');
 
+      getLatestOpenedImg = index + 1;
       //create div element for image
       let container = document.body;
       let newImgWindow = document.createElement('div');
       container.appendChild(newImgWindow);
       newImgWindow.setAttribute('class', 'img-window');
 
+
       // adding src of image to element
       let newImg = document.createElement('img');
       newImgWindow.appendChild(newImg);
       newImg.setAttribute('src','../images/'+setNewImgUrl);
-
-      // create clobe btn
-      let closeBtn = document.createElement('a');
-      let newCloseText = document.createTextNode('x');
-      closeBtn.appendChild(newCloseText);
-      newImgWindow.appendChild(closeBtn);
-      closeBtn.setAttribute('class', 'close-btn');
+      newImg.setAttribute('id','current-img');
 
       newImg.addEventListener('load',() => {
         // next btn
@@ -66,7 +62,22 @@ if(galleryImages) {
         nextBtn.appendChild(nextText);
         container.appendChild(nextBtn);
         nextBtn.setAttribute('class', 'img-btn-next');
-        nextBtn.addEventListener('click',changeImg(1));
+        nextBtn.addEventListener('click', () => {
+          document.querySelector('#current-img').remove();
+
+          let getImgWindow = document.querySelector('.img-window');
+          let newImg = document.createElement('img');
+          getImgWindow.appendChild(newImg);
+          let calcNewImg;
+          calcNewImg = getLatestOpenedImg + 1;
+
+          if(calcNewImg > galleryImages.length) {
+            calcNewImg = 1;
+          }
+          newImg.setAttribute('src','../images/img'+ calcNewImg +'.jpg');
+          newImg.setAttribute('id', 'current-img');
+          getLatestOpenedImg = calcNewImg;
+        });
         nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;' ;
 
         // prev btn
@@ -75,22 +86,26 @@ if(galleryImages) {
         prevBtn.appendChild(prevText);
         container.appendChild(prevBtn);
         prevBtn.setAttribute('class', 'img-btn-prev');
-        prevBtn.addEventListener('click',changeImg(0));
+        prevBtn.addEventListener('click', () => {
+          document.querySelector('#current-img').remove();
+
+          let getImgWindow = document.querySelector('.img-window');
+          let newImg = document.createElement('img');
+          getImgWindow.appendChild(newImg);
+          let calcNewImg;
+          calcNewImg = getLatestOpenedImg - 1;
+
+          if(calcNewImg < 1) {
+            calcNewImg = galleryImages.length;
+          }
+          newImg.setAttribute('src','../images/img'+ calcNewImg +'.jpg');
+          newImg.setAttribute('id', 'current-img');
+          getLatestOpenedImg = calcNewImg;
+        });
         prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
 
-      })
+      });
 
-      // changing img
-      function changeImg(changeImg) {
-
-      }
-
-      // close on btn
-      closeBtn.addEventListener('click',()=>{
-        newImgWindow.remove();
-        document.querySelector('.img-btn-next').remove();
-        document.querySelector('.img-btn-prev').remove();
-      })
       // funcstion to close modal if outside click
       newImgWindow.addEventListener('click',(e)=>{
         if(e.target == newImgWindow) {
