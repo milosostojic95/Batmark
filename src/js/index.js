@@ -77,6 +77,15 @@ if(galleryImages) {
           newImg.setAttribute('src','../images/img'+ calcNewImg +'.jpg');
           newImg.setAttribute('id', 'current-img');
           getLatestOpenedImg = calcNewImg;
+             //position nexxtbtn and prev btn after images load
+          newImg.addEventListener('load',() => {
+            let imgWidth = newImg.width;
+            let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
+            let nextBtn = document.querySelector('.img-btn-next');
+            nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;' ;
+            let prevBtn = document.querySelector('.img-btn-prev');
+          prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
+          });
         });
         nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;' ;
 
@@ -101,10 +110,20 @@ if(galleryImages) {
           newImg.setAttribute('src','../images/img'+ calcNewImg +'.jpg');
           newImg.setAttribute('id', 'current-img');
           getLatestOpenedImg = calcNewImg;
+             //position nexxtbtn and prev btn after images load
+          newImg.addEventListener('load',() => {
+            let imgWidth = newImg.width;
+            let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
+            let nextBtn = document.querySelector('.img-btn-next');
+            nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;' ;
+            let prevBtn = document.querySelector('.img-btn-prev');
+          prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
+          });
         });
         prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
 
       });
+
 
       // funcstion to close modal if outside click
       newImgWindow.addEventListener('click',(e)=>{
