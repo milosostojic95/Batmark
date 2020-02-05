@@ -94,3 +94,16 @@
     margin-left: 10px;
   }
 }
+
+.close-btn {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  color: white;
+  z-index: 500;
+  background-color: #111111;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 25px;
+}

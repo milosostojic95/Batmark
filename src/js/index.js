@@ -2,6 +2,7 @@ import '../scss/main.scss';
 import textWriter from './typewriter';
 import scrollApper from './scrollanim';
 import {changeDot, changeSlide} from './slide';
+import menuTrigger from './menutrigger';
 
 // scroll animations and typewriter anim
 document.addEventListener('DOMContentLoaded', () => {
@@ -123,8 +124,6 @@ if(galleryImages) {
         prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
 
       });
-
-
       // funcstion to close modal if outside click
       newImgWindow.addEventListener('click',(e)=>{
         if(e.target == newImgWindow) {
@@ -153,6 +152,10 @@ contactText.forEach((form,index) => {
   });
 })
 
+// menu trigger
+const menuBtn = document.querySelector('.menu-trigger');
+
+menuBtn.addEventListener('click',menuTrigger);
 
 
 
