@@ -36,6 +36,7 @@
       h1 {
         text-transform: uppercase;
         font-size: 2.2rem;
+        color: $headingColor;
       }
 
       form {
@@ -106,10 +107,15 @@
         h2 {
           margin: .5rem 0;
           text-transform: uppercase;
+          color: $headingColor;
         }
 
         p {
-          color: grey;
+          color: black;
+        }
+
+        h3 {
+          color: $headingColor;
         }
       }
     }

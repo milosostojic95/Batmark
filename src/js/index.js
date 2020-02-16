@@ -85,7 +85,7 @@ if(galleryImages) {
             let nextBtn = document.querySelector('.img-btn-next');
             nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;' ;
             let prevBtn = document.querySelector('.img-btn-prev');
-          prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
+            prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
           });
         });
         nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;' ;
@@ -118,7 +118,7 @@ if(galleryImages) {
             let nextBtn = document.querySelector('.img-btn-next');
             nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;' ;
             let prevBtn = document.querySelector('.img-btn-prev');
-          prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
+            prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
           });
         });
         prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
