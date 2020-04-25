@@ -1,7 +1,7 @@
 .why-batmark {
   background: rgb(244, 244, 244);
-  padding: 120px 1.25rem;
-
+  display: flex;
+  flex-wrap: wrap;
 
   @include breakpoint(mobile) {
     padding: 120px 1rem;
@@ -20,6 +20,7 @@
   }
 
   .left-part-why {
+    flex-basis: 70%;
     padding-right: 5vw;
     opacity: 0;
     transform: translateY(50px);
@@ -104,28 +105,39 @@
 
   .right-part-why {
     flex-basis: 30%;
-    background-image: url('../images/home/iphonebg.png');
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
     position: relative;
     opacity: 0;
     transform: translateY(50%);
     transition: .7s all ease;
 
-    &::before {
-      content: '';
+   .right-part-image {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 97%;
+      width: 93%;
+      border-radius: 43px;
+    }
+   }
+
+   .right-part-bg {
+
+    img {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background-image: url('../images/home/iphone.png');
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      overflow: hidden;
     }
+   }
 
     @include breakpoint (mobile) {
       display: none;
