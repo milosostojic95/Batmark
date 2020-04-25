@@ -2,6 +2,7 @@ export {changeDot,changeSlide};
 
 const slides = document.querySelectorAll('.slide > .slide-item');
 const links = document.querySelectorAll('.nav-link');
+let current = 0;
 
 function changeDot(dot){
   links.forEach((link)=>{
@@ -11,10 +12,12 @@ function changeDot(dot){
 };
 
 function changeSlide(slidePage){
-  slides.forEach((slide)=>{
-    slide.style.opacity= '0';
-    slide.style.transition='.2s';
-    });
-  slides[slidePage].style.opacity ='1';
-  slides[slidePage].style.transition ='.8s';
+  const nextPage = slides[slidePage];
+  const currentPage = slides[current];
+
+  nextPage.classList.add('show');
+  nextPage.classList.remove('done');
+  currentPage.classList.add('done');
+  currentPage.classList.remove('show');
+  current = slidePage;
 };
