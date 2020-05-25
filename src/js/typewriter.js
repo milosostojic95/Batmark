@@ -15,19 +15,22 @@ class typeWriter {
     const fullTxt = this.words[current];
     let typeSpeed = 100;
 
+    //remove item one by one
     if(this.isDeleting) {
       this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-    if(this.isDeleting) {
       typeSpeed /= 2;
     }
+    // adding item one by one
+    else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
 
+    // when words is completed, then delete items
     if(!this.isDeleting && this.txt === fullTxt) {
       typeSpeed = this.wait;
       this.isDeleting = true;
     }
+    // changing to another word
     else if(this.isDeleting && this.txt === '') {
       this.isDeleting = false;
       this.wordIndex ++;
