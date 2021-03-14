@@ -1,3 +1,9 @@
+$primary: #f19224;
+$secondary: #fcfbfb;
+$dark: #1a1d38;
+$medium: #fce181;
+$cold: #edeae5;
+@import '~bootstrap/scss/bootstrap';
 @import './homepage/variables/home-variables';
 @import './servicepage/servicevariables/servicevariables';
 @import './referencepage/refvariable/refvariables';
@@ -20,7 +26,7 @@
 // sections
 
 @import './homepage/sections/home';
-@import './homepage/sections/why';
+@import './homepage/sections/gallery';
 @import './homepage/sections/service';
 @import './homepage/sections/reference';
 @import './homepage/sections/about';

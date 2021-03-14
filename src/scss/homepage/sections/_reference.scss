@@ -1,1 +1,87 @@
+.reference {
+    position: relative;
+    overflow: hidden;
+    margin: 120px 0 0;
+    min-height: 500px;
+    color: $dark;
+    @include media-breakpoint-up(xs) {
+      padding: 80px 0;
+    }
 
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 24px;
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $secondary;
+      content: '';
+      width: 65%;
+      height: 421px;
+      z-index: -1;
+    }
+    .slider {
+      position: absolute;
+      transform: translateY(30px);
+      width: calc(50vw + 160px);
+      .owl-stage-outer {
+        padding: 10px 0px 30px 10px;
+        .item {
+          background: $white;
+          box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.07);
+          border-radius: 2px;
+          width: 255px;
+          height: 266px;
+          padding: 40px 20px 30px 20px;
+          &:hover {
+            box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.15);
+          }
+          .svg {
+            @include media-breakpoint-up(md) {
+              height: 40px;
+              width: 45px;
+              margin-bottom: 1rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+              height: 45px;
+              width: 50px;
+              margin-bottom: 2rem;
+            }
+          }
+          h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: $primary;
+          }
+          .item-description {
+            height: 100px;
+            display: flex;
+            align-items: flex-end;
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .owl-dots {
+        margin-top: 20px;
+      }
+    }
+
+    .reference-btn {
+      a {
+        @include media-breakpoint-up(sm) {
+          width: 180px;
+        }
+        @include media-breakpoint-up(lg) {
+          width: 255px;
+        }
+      }
+    }
+  }

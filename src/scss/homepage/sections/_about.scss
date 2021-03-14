@@ -1,53 +1,47 @@
-.about {
-  background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url('../images/home/about.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-
-  @include breakpoint(mobile) {
-    padding: 0 1rem;
+.about-us {
+  @include media-breakpoint-up(xs) {
+    padding: 80px 0;
   }
-
-  @include breakpoint(smallTablet) {
-    padding: 0 2rem;
+  @include media-breakpoint-up(lg) {
+    padding: 120px 0;
   }
+  .about-us-content {
+    position: relative;
 
-  @include breakpoint(laptop) {
-    padding: 0 3rem;
-  }
-
-  @include breakpoint(desktop) {
-    padding: 0 0rem;
-  }
-
-  .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10rem 0;
-
-    .about-text {
-      flex-basis: 70%;
-      padding-right: 15%;
-
-      @include breakpoint(mobile) {
-        flex-basis: 100%;
+    .about-us-block {
+      color: $dark;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #fcfbfb;
+      box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.07);
+      @include media-breakpoint-down(sm) {
+        padding: 30px 40px;
+        width: 90%;
+        height: 350px;
+        margin-bottom: -70px;
       }
-
-      @include breakpoint(tablet) {
-        flex-basis: 70%;
+      @include media-breakpoint-up(sm) {
+        padding: 30px 40px;
+        width: 90%;
+        height: 350px;
+        margin-bottom: -70px;
       }
-
-      h2 {
-        font-size: 2.3rem;
-        color: $serviceBg;
-        text-align: left;
-        color: $aboutHeadingSpan;
+      @include media-breakpoint-up(md) {
+        padding: 30px 60px;
+        width: 440px;
+        height: 400px;
       }
-
-      p {
-        font-size: 1.125rem;
-        color: $aboutHeadingColor;
-        padding: 1rem 0 0;
+      @include media-breakpoint-up(lg) {
+        padding: 50px 80px;
+        width: 540px;
+        height: 500px;
+      }
+      h1 {
+        font-weight: bold;
+        @include media-breakpoint-up(md) {
+          font-size: 36px;
+        }
       }
     }
   }

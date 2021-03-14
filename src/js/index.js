@@ -1,29 +1,145 @@
+import 'bootstrap';
+import 'owl.carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
 import '../scss/main.scss';
-import textWriter from './typewriter';
 import scrollApper from './scrollanim';
-import {changeDot, changeSlide} from './slide';
 import menuTrigger from './menutrigger';
 
-// scroll animations and typewriter anim
-document.addEventListener('DOMContentLoaded', () => {
-  const accordion = document.getElementById('accordion');
-  if(!accordion) {
-    return;
-  }
-  else {
-    textWriter();
-    document.addEventListener('scroll', scrollApper);
-  }
-});
+// owl carousel
+(function($) {
+  $(document).ready(function(){
+    var homeSlider = $('.hero-slider .owl-carousel');
+    homeSlider.owlCarousel({
+      loop: true,
+      autoplay: true,
+      smartSpeed: 1500,
+      items: 1,
+      autoplayHoverPause: true
+    });
 
-// home page slider
-const links = document.querySelectorAll('.nav-link');
-links.forEach((link,index)=>{
-  link.addEventListener('click',()=>{
-    changeDot(link);
-    changeSlide(index);
+    var trainingCarousel = $('.reference .slider .owl-carousel');
+    trainingCarousel.owlCarousel({
+      items:4,
+      loop: true,
+      autoplay: false,
+      smartSpeed: 1500,
+      margin: 30,
+      autoWidth: true,
+      autoplayHoverPause: true,
+      dots: true,
+      responsive: {
+        0: {
+          items: 2,
+        },
+        576: {
+          items: 2,
+        },
+        768: {
+          items:2,
+        },
+        992: {
+          items:1,
+        },
+        1200: {
+          items:1,
+        }
+      }
+    })
+    var testimonialCarousel = $('.why-batmark .testimonial-slider .owl-carousel');
+    testimonialCarousel.owlCarousel({
+      loop: true,
+      autoplay: false,
+      smartSpeed: 1500,
+      margin: 30,
+      autoWidth: true,
+      autoplayHoverPause: true,
+      dots: true,
+      responsive: {
+        0: {
+          items: 2,
+        },
+        576: {
+          items: 2,
+        },
+        768: {
+          items:2,
+        },
+        992: {
+          items:1,
+        },
+        1200: {
+          items:1,
+        }
+      }
+    })
+    var trainingslCarousel = $('.trainings-testimonial .testimonial-slider-trainings .owl-carousel');
+    trainingslCarousel.owlCarousel({
+      items:2,
+      loop: true,
+      autoplay: false,
+      smartSpeed: 1500,
+      autoWidth: true,
+      autoplayHoverPause: true,
+      center: true,
+      dots: true,
+      responsive: {
+        0: {
+          items: 2,
+          margin: 20,
+        },
+        578: {
+          items: 2,
+          margin: 30,
+        },
+        768: {
+          items: 2,
+          margin: 30,
+        },
+        992: {
+          items: 2,
+          margin: 50,
+        },
+        1200: {
+          margin: 70,
+        }
+      }
+    })
+    var trainingslCarousel = $('.gallery-slider .testimonial-slider-gallery .owl-carousel');
+    trainingslCarousel.owlCarousel({
+      items:2,
+      loop: true,
+      autoplay: false,
+      smartSpeed: 1500,
+      autoWidth: true,
+      autoplayHoverPause: true,
+      center: true,
+      dots: true,
+      responsive: {
+        0: {
+          items: 2,
+          margin: 20,
+        },
+        578: {
+          items: 2,
+          margin: 30,
+        },
+        768: {
+          items: 2,
+          margin: 30,
+        },
+        992: {
+          items: 2,
+          margin: 50,
+        },
+        1200: {
+          margin: 70,
+        }
+      }
+    })
   });
-});
+}(jQuery));
+
+
 
 //gallery popup
 let galleryImages = document.querySelectorAll('.gallery-item');
@@ -151,11 +267,6 @@ contactText.forEach((form,index) => {
     labelText[index].style.fontSize = '16px';
   });
 })
-
-// menu trigger
-const menuBtn = document.querySelector('.menu-trigger');
-
-menuBtn.addEventListener('click',menuTrigger);
 
 
 

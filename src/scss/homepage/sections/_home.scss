@@ -1,143 +1,36 @@
-.intro-home {
-  position: relative;
+.hero-slider {
+  .item {
+    width: 100%;
+    height: 90vh;
+    background-color: $primary;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-  @include breakpoint(mobile) {
-    height: calc(100vh - 119px);
-  }
-
-  @include breakpoint(tablet) {
-    height: calc(100vh - 119px);
-  }
-
-  @include breakpoint(laptop) {
-    height: calc(100vh - 119px);
-  }
-
-  .hero-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: $homeContentBg;
-    z-index: 2;
-    padding: 10%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    color: $homeColor;
-
-    @include breakpoint(mobile) {
-      width: 100%;
-    }
-
-    @include breakpoint(tablet) {
-      width: 60%;
-    }
-
-    h1 {
-      flex-basis: 100%;
-      line-height: 1;
-
-      @include breakpoint(mobile) {
-        font-size: 12vw;
-      }
-
-      @include breakpoint(smallTablet) {
-        font-size: 7.5vw;
-      }
-
-      @include breakpoint(tablet) {
-        font-size: 5.5vw;
-      }
-
-      @include breakpoint(laptop) {
-        font-size: 5vw;
-      }
-    }
-
-    h3 {
-      flex-basis: 100%;
-      margin: 2rem 0;
-
-      @include breakpoint(mobile) {
-        font-size: 7vw;
-      }
-
-      @include breakpoint(smallTablet) {
-        font-size: 3.5vw;
-      }
-
-
-      @include breakpoint(tablet) {
-        font-size: 2vw;
-        margin: 1rem 0;
-      }
-
-      @include breakpoint(laptop) {
-        font-size: 1.5vw;
-      }
-
-      .txt {
-        border-right: 0.2rem solid white;
-      }
-    }
-
-    .scroll-down {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 68px;
-      height: 68px;
-      transform: translateX(100%) rotate(90deg);
-      background: $homeBtnBg;
-
-      @include breakpoint(mobile) {
-        display: none;
-      }
-
-      @include breakpoint(tablet) {
-        display: block;
-      }
-
-      svg {
-        display: block;
-        margin: auto;
-        text-align: center;
-        margin-top: 28px;
+    .slider-content {
+      height: 100%;
+      padding-bottom: 5rem;
+      color: #fff;
+      h1 {
+        font-weight: bold;
+        @include media-breakpoint-up(xs) {
+          font-size: 40px;
+        }
+        @include media-breakpoint-up(md) {
+          font-size: 64px;
+        }
       }
 
       p {
-        opacity: 0;
-        color: black;
-        margin-left: 10px;
-        font-weight: 500;
-        transform: translateY(-210%);
-        transition: .2s;
-      }
-
-      &:hover p {
-        opacity: 1;
-        transform: translateY(-210%);
+        @include media-breakpoint-up(xs) {
+          font-size: 24px;
+        }
+        @include media-breakpoint-up(md) {
+          font-size: 32px;
+        }
       }
     }
   }
-
-  .hero-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: calc(100vh - 187px);
-    z-index: 1;
-    background-image: url('../images/home/homeintro.jpg');
-    background-position: center center;
-    background-size: cover;
-
-    @include breakpoint(mobile) {
-      width: 100%;
-    }
-
-    @include breakpoint(tablet) {
-      width: 55%;
-    }
-  }
+  .slide-one {background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)), url('../images/home/slide-one.jpg');  }
+  .slide-two {background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)), url('../images/home/homeintro.jpg');  }
 }

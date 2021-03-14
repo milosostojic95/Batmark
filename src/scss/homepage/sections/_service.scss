@@ -1,175 +1,49 @@
-.slide-show {
-  position: relative;
-  background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/home/img3.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-
-  @include breakpoint(mobile) {
-    height: 100%;
-    padding: 120px 1rem;
+.services {
+  @include media-breakpoint-up(xs) {
+    padding: 80px 0;
   }
-
-  @include breakpoint(smallTablet) {
-    height: 100vh;
-    padding: 120px 2rem;
+  @include media-breakpoint-up(md) {
+    padding: 120px 0;
   }
-
-  @include breakpoint(laptop) {
-    padding: 120px 3rem 0;
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
   }
-
-  h2 {
-    font-size: 3.375rem;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.875rem;
-    position: relative;
-    color: white;
-
-    &::before {
-      content: '';
-      position: absolute;
-      background: orangered;
-      bottom: 0;
-      left: 0;
-      height: 2px;
-      width: 90px;
+  a {
+    color: $black;
+    text-decoration: none;
+    &:hover {
+      .trainings-box {
+        box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.15);
+      }
     }
-  }
+    .trainings-box {
+      box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.07);
+      padding: 50px 30px;
+      height: 388px;
 
-  .slides {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 3rem 0;
-    opacity: 0;
-    transform: translateY(50%);
-    transition: .7s all ease;
-
-    .slide {
-      position: relative;
-
-      @include breakpoint(mobile) {
-        flex-basis: 100%;
-      }
-
-      @include breakpoint(tablet) {
-        flex-basis: calc(100% - 100px);
-      }
-
-      .slide-item {
-        list-style: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: 2s;
-
-        @include breakpoint(mobile) {
-          padding-right: 10%;
+      h3 {
+        @include media-breakpoint-down(md) {
+          font-size: 18px;
         }
-
-        @include breakpoint(smallTablet) {
-          padding-right: 20%;
+        @include media-breakpoint-up(md) {
+          font-size: 20px;
         }
-
-         h3 {
-           font-size: 2.375rem;
-           color: white;
-         }
-
-         p {
-           padding: 2rem 0;
-           font-size: 1.125rem;
-           line-height: 1.5;
-           color: $serviceTextColor;
-         }
-      }
-
-      .show {
-        animation-name: show;
-        animation-duration: .3s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-
-        @keyframes show {
-          0% {
-            opacity: 0;
-            transform: translateY(100%);
-          }
-
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        @include media-breakpoint-up(lg) {
+          font-size: 24px;
         }
       }
-
-      .done {
-        animation-name: done;
-        animation-duration: .2s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-
-        @keyframes done {
-          0% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-
-          100% {
-            opacity: 0;
-            transform: translateY(-100%);
-          }
+      p {
+        @include media-breakpoint-down(md) {
+          font-size: 16px;
         }
-      }
-
-    }
-
-    .nav {
-      flex-basis: 100px;
-      position: relative;
-
-      @include breakpoint(mobile) {
-        display: flex;
-        flex-basis: 20%;
-        justify-content: space-between;
-        margin: 0 auto;
-      }
-
-      @include breakpoint(tablet) {
-        flex-basis: 100px;
-        display: block;
-
-      }
-
-      .nav-link {
-        text-indent: 200%;
-        white-space: nowrap;
-        overflow: hidden;
-        display: block;
-        width: 18px;
-        height: 18px;
-        background-color: #d8d8d8;
-        border-radius: 50%;
-        margin-bottom: 10px;
-
-        @include breakpoint(mobile) {
-          margin-top: 4rem;
-          margin-left: 0;
-          margin-bottom: 0;
+        @include media-breakpoint-up(md) {
+          font-size: 16px;
         }
-
-        @include breakpoint(tablet) {
-          margin-left: auto;
-          margin-top: 1rem;
+        @include media-breakpoint-up(lg) {
+          font-size: 18px;
         }
-      }
-
-      .active {
-        background-color: orangered;
       }
     }
   }
 }
-
