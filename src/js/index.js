@@ -19,7 +19,7 @@ import menuTrigger from './menutrigger';
 
     var trainingCarousel = $('.reference .slider .owl-carousel');
     trainingCarousel.owlCarousel({
-      items:4,
+      items:1,
       loop: true,
       autoplay: false,
       smartSpeed: 1500,
@@ -269,4 +269,13 @@ contactText.forEach((form,index) => {
 })
 
 
+document.addEventListener('scroll',() => {
+  const navBar = document.querySelector('.navigation');
+  const scroll = window.scrollY;
+  if(scroll >= window.innerHeight / 3) {
+    navBar.classList.add('nav-color')
+  } else {
+    navBar.classList.remove('nav-color')
+  }
+})
 

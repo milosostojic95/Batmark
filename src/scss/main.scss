@@ -1,27 +1,23 @@
-$primary: #f19224;
-$secondary: #fcfbfb;
-$dark: #1a1d38;
-$medium: #fce181;
-$cold: #edeae5;
+$primary: #4d1d6e;
+$secondary: #00A19A;
+$dark-grey: #3C3C3B;
+$grey: #666e82;
 @import '~bootstrap/scss/bootstrap';
-@import './homepage/variables/home-variables';
-@import './servicepage/servicevariables/servicevariables';
-@import './referencepage/refvariable/refvariables';
-@import './contactpage/contactvariables/contactvariables';
 @import './galleryhome/variables/galleryvariables';
 
+//fonts
+@import './base/fonts';
 //global scss
 @import './base/base';
 @import './mixin/breakpoints';
 
-//fonts
-@import './base/fonts';
+
 
 
 //layouts
 
-@import './homepage/layouts/header';
-@import './homepage/layouts/footer';
+@import './layouts/header';
+@import './layouts/footer';
 
 // sections
 
@@ -30,23 +26,17 @@ $cold: #edeae5;
 @import './homepage/sections/service';
 @import './homepage/sections/reference';
 @import './homepage/sections/about';
-
-
-@import './servicepage/sections/servicehome';
-@import './servicepage/sections/serviceitems';
+@import './services/services';
 
 
 @import './galleryhome/sections/galleryhome';
 @import './galleryhome/sections/galleryintro';
 
 
-@import './referencepage/section/referenceintro';
-@import './referencepage/section/referenceimages';
 
-@import './contactpage/section/contactintro';
-@import './contactpage/section/contactmain';
-// components
+
 
 @import './homepage/components/buttons';
 @import './galleryhome/components/gallerybtns';
+@import './about/about'
 

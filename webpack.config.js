@@ -18,8 +18,16 @@ module.exports = {
       template: './src/index.html'
     }),
     new HtmlWebpackPlugin({
-      filename: 'service.html',
-      template: './src/service.html'
+      filename: 'service-one.html',
+      template: './src/service-one.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'service-two.html',
+      template: './src/service-two.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'service-three.html',
+      template: './src/service-three.html'
     }),
     new HtmlWebpackPlugin({
       filename: 'gallery.html',
@@ -32,6 +40,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'contact.html',
       template: './src/contact.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: './src/about.html'
     }),
      new MiniCssExtractPlugin({
       filename: '[name].css'

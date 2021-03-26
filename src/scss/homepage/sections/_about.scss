@@ -1,47 +1,115 @@
-.about-us {
-  @include media-breakpoint-up(xs) {
-    padding: 80px 0;
+.why-morph-network {
+  margin-top: -200px;
+  padding: 300px 0 100px 0;
+  background-position: top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: relative;
+  h2 {
+    font-weight: 700;
+    color: $dark-grey;
   }
-  @include media-breakpoint-up(lg) {
-    padding: 120px 0;
-  }
-  .about-us-content {
+  .why-morph-network-content {
     position: relative;
+    padding-top: 120px;
+    z-index: 1;
 
-    .about-us-block {
-      color: $dark;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      background-color: #fcfbfb;
-      box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.07);
-      @include media-breakpoint-down(sm) {
-        padding: 30px 40px;
-        width: 90%;
-        height: 350px;
-        margin-bottom: -70px;
-      }
-      @include media-breakpoint-up(sm) {
-        padding: 30px 40px;
-        width: 90%;
-        height: 350px;
-        margin-bottom: -70px;
-      }
-      @include media-breakpoint-up(md) {
-        padding: 30px 60px;
-        width: 440px;
-        height: 400px;
-      }
-      @include media-breakpoint-up(lg) {
-        padding: 50px 80px;
-        width: 540px;
-        height: 500px;
-      }
-      h1 {
+    @include media-breakpoint-down(sm) {
+      padding-top: 80px;
+    }
+
+    .text-content {
+      z-index: 1;
+
+      h5 {
+        text-align: left;
+        color: $secondary;
         font-weight: bold;
-        @include media-breakpoint-up(md) {
-          font-size: 36px;
+
+        span {
+          display: block;
+          line-height: 1.4;
+          color: $primary;
         }
+
+        @include media-breakpoint-down(md) {
+          width: 90%;
+          text-align: left;
+          margin:  0 auto;
+          font-size: 18px;
+        }
+
+        @include media-breakpoint-down(lg) {
+          font-size: 22px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: $grey;
+        line-height: 1.5;
+        margin-top: 30px;
+        text-align: justify;
+        width: 55%;
+
+        @include media-breakpoint-down(md) {
+          width: 90%;
+          margin: 2rem auto;
+        }
+      }
+    }
+
+    .why-morph-network-blocks {
+      position: relative;
+      margin-top: -230px;
+      margin-left: auto;
+      width: 80%;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+
+      .row {
+        margin-left: -8px;
+        margin-right: -8px;
+
+        div[class^="col-"] {
+          padding-left: 9px;
+          padding-right: 9px;
+        }
+      }
+
+      .network-block-item {
+        padding: 30px;
+        border-radius: 7px;
+        box-shadow: 0px 10px 60px 0px rgba(46, 61, 98, 0.15);
+        margin-bottom: 18px;
+        min-height: 180px;
+        background-color: $white;
+        transition: all .2s ease-in-out;
+        transform: translateY(0px);
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0px 15px 80px 0px rgba(46, 61, 98, 0.2);
+          transform: translateY(-5px);
+        }
+
+        img {
+          width: 38px;
+          height: auto;
+          display: block;
+          margin-bottom: 20px;
+        }
+
+        h6 {
+          color: $dark-grey;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        margin: 0 0;
+        width: 100%;
       }
     }
   }

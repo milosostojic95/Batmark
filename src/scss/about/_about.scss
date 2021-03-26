@@ -1,0 +1,163 @@
+.about-us-hero {
+  height: 70vh;
+  background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0%,rgba(255,255,255,.3) 90%), url('../images/home/homeintro.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .about-us-wrapper {
+    height: 100%;
+    color: $white;
+    h1 {
+      font-weight: bold;
+      @include media-breakpoint-up(xs) {
+        font-size: 40px;
+      }
+      @include media-breakpoint-up(md) {
+        font-size: 64px;
+      }
+    }
+
+    p {
+      @include media-breakpoint-up(xs) {
+        font-size: 24px;
+      }
+      @include media-breakpoint-up(md) {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.who-we-are {
+  padding: 120px 60px 80px;
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 24px;
+  }
+  .who-btn {
+    a {
+      color: $white;
+      @include media-breakpoint-up(sm) {
+        width: 180px;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 255px;
+      }
+    }
+  }
+}
+
+.our-people {
+  padding: 80px 0;
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: $headingFontFamily;
+  }
+  img {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 3px 9px 2px rgba(46, 61, 98, .2);
+  }
+  .img-text-left {
+    .employee {
+      position: relative;
+
+      .people-border {
+        position: absolute;
+        top: -9%;
+        left: 50%;
+        transform: translate(-50%, 8%);
+        border: 7px solid $primary;
+        width: 400px;
+        height: 180px;
+        z-index: 100;
+        -webkit-transform: translate(-50%, 8%);
+        -moz-transform: translate(-50%, 8%);
+        -ms-transform: translate(-50%, 8%);
+        -o-transform: translate(-50%, 8%);
+      }
+    }
+    .people-text {
+      padding: 30px 40px 50px 0;
+
+      h2 {
+        color: $primary;
+      }
+      h5 {
+        span {
+          color: $primary;
+        }
+      }
+      p {
+        font-size: 20px;
+        font-family: $bodyFontFamily;
+      }
+    }
+  }
+  .img-text-right {
+    padding-top: 7rem;
+    .employee {
+      position: relative;
+
+      .people-border {
+        position: absolute;
+        top: -9%;
+        left: 50%;
+        transform: translate(-50%, 8%);
+        border: 7px solid $primary;
+        width: 400px;
+        height: 180px;
+        z-index: 100;
+        -webkit-transform: translate(-50%, 8%);
+        -moz-transform: translate(-50%, 8%);
+        -ms-transform: translate(-50%, 8%);
+        -o-transform: translate(-50%, 8%);
+      }
+    }
+    .people-text {
+      padding: 30px 40px 50px 0;
+
+      h2 {
+        color: $primary;
+      }
+      h5 {
+        span {
+          color: $primary;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        font-family: $bodyFontFamily;
+      }
+    }
+  }
+  .contact-us-btn {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      color: white;
+      width: 160px;
+      font-size: 20px;
+      @include media-breakpoint-down(xs) {
+        width: 160px;
+        font-size: 12px;
+      }
+      @include media-breakpoint-up(xs) {
+        width: 180px;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 255px;
+      }
+    }
+  }
+}
