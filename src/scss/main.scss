@@ -5,15 +5,11 @@ $grey: #666e82;
 @import '~bootstrap/scss/bootstrap';
 @import './galleryhome/variables/galleryvariables';
 
-//fonts
-@import './base/fonts';
 //global scss
 @import './base/base';
 @import './mixin/breakpoints';
 
-
-
-
+@import './components/buttons';
 //layouts
 
 @import './layouts/header';
@@ -21,11 +17,11 @@ $grey: #666e82;
 
 // sections
 
-@import './homepage/sections/home';
-@import './homepage/sections/gallery';
-@import './homepage/sections/service';
-@import './homepage/sections/reference';
-@import './homepage/sections/about';
+@import './homepage/home';
+@import './homepage/gallery';
+@import './homepage/service';
+@import './homepage/reference';
+@import './homepage/about';
 @import './services/services';
 
 
@@ -36,7 +32,5 @@ $grey: #666e82;
 
 
 
-@import './homepage/components/buttons';
-@import './galleryhome/components/gallerybtns';
 @import './about/about'
 

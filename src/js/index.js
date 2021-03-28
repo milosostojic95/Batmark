@@ -2,8 +2,6 @@ import 'bootstrap';
 import 'owl.carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import '../scss/main.scss';
-import scrollApper from './scrollanim';
-import menuTrigger from './menutrigger';
 
 // owl carousel
 (function($) {
