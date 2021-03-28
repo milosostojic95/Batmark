@@ -1,0 +1,201 @@
+.studies-testemonials {
+  padding: 70px 0 200px 0;
+  position: relative;
+  background-size: cover;
+  background-position: 0 0;
+
+  @include media-breakpoint-down(md) {
+    margin-top: -20rem;
+  }
+
+
+  .title {
+    text-decoration: none;
+    h4 {
+      transition: all 0.2s ease-in-out;
+      font-weight: bold;
+    }
+    &:hover h4 {
+      color: $secondary !important;
+    }
+  }
+
+  .testemonial-image-holder {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-up(md) {
+      justify-content: start;
+    }
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none !important;
+    }
+
+    .ellipse {
+      width: 325px;
+      height: 325px;
+      border-radius: 100%;
+      background-color: $white;
+      box-shadow: 0px 10px 60px 0px rgba(46, 61, 98, 0.1);
+      position: relative;
+      cursor: pointer;
+
+      img {
+        filter: grayscale(1);
+        transition: filter 0.2s ease-in-out;
+        height: 50%;
+        width: 50%;
+      }
+
+      &:hover img {
+        filter: grayscale(0);
+      }
+
+      @include media-breakpoint-down(md) {
+        margin: 2rem 0 4rem;
+        height: 275px;
+        width: 275px;
+      }
+
+      .more {
+        text-align: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        top: 50%;
+        right: -35px;
+        transform: translateY(-50%);
+        background-color: $primary;
+        box-shadow: 0px 10px 60px 0px rgba(46, 61, 98, 0.1);
+        position: absolute;
+        color: $white;
+        line-height: 16px;
+        font-size: 14px;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          background-color: $secondary;
+        }
+      }
+    }
+  }
+
+  .testemonial-slider {
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    .item {
+      div[class^="col-"] {
+        min-height: 400px;
+      }
+    }
+    p {
+      font-weight: 300;
+      line-height: 1.875;
+      margin-bottom: 35px;
+      color: $grey;
+      position: relative;
+      text-align: justify;
+
+      &:before {
+        content: '';
+        background: url('../images/home/quote.svg') no-repeat left top;
+        display: block;
+        width: 39px;
+        height: 32px;
+        position: absolute;
+        left: -55px;
+
+        @include media-breakpoint-down(md) {
+          top: -40px;
+          left: 0;
+        }
+      }
+    }
+
+    .owl-nav {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 25px;
+      right: 0;
+      .arrow-right {
+        background-image: url('../images/home/carousel-arrow-right.png');
+        width: 30px;
+        transition: all 0.15s ease-in-out;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 30px;
+        border: none;
+      }
+      .arrow-left {
+        width: 30px;
+        height: 30px;
+        transition: all 0.15s ease-in-out;
+        background-image: url('../images/home/carousel-arrow-left.png');
+        -webkit-transition: all 0.15s ease-in-out;
+        -moz-transition: all 0.15s ease-in-out;
+        -ms-transition: all 0.15s ease-in-out;
+        -o-transition: all 0.15s ease-in-out;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      button {
+        &.disabled {
+          img {
+            filter: grayscale(100%);
+            opacity: 0.3;
+          }
+        }
+
+        &:focus {
+          outline: 0;
+        }
+
+        &:first-child {
+          img {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .testemonial-person {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        margin-right: 15px;
+      }
+
+      .testemonial-name {
+        display: block;
+        font-weight: 16px;
+        color: #27303a;
+      }
+
+      .testemonial-company {
+        display: block;
+        font-size: 12px;
+        font-weight: 300;
+        color: #27303a;
+      }
+    }
+  }
+}

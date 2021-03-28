@@ -1,6 +1,7 @@
 .about-us-hero {
   height: 70vh;
-  background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0%,rgba(255,255,255,.3) 90%), url('../images/home/homeintro.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0.3) 90%),
+    url('../images/home/homeintro.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -63,7 +64,7 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    box-shadow: 0px 3px 9px 2px rgba(46, 61, 98, .2);
+    box-shadow: 0px 3px 9px 2px rgba(46, 61, 98, 0.2);
   }
   .img-text-left {
     .employee {
@@ -74,7 +75,7 @@
         top: -9%;
         left: 50%;
         transform: translate(-50%, 8%);
-        border: 7px solid $primary;
+        border: 7px solid $secondary;
         width: 400px;
         height: 180px;
         z-index: 100;
@@ -91,9 +92,7 @@
         color: $primary;
       }
       h5 {
-        span {
-          color: $primary;
-        }
+        color: $secondary;
       }
       p {
         font-size: 20px;
@@ -111,7 +110,7 @@
         top: -9%;
         left: 50%;
         transform: translate(-50%, 8%);
-        border: 7px solid $primary;
+        border: 7px solid $secondary;
         width: 400px;
         height: 180px;
         z-index: 100;
@@ -128,11 +127,8 @@
         color: $primary;
       }
       h5 {
-        span {
-          color: $primary;
-        }
+        color: $secondary;
       }
-
       p {
         font-size: 20px;
         font-family: $bodyFontFamily;
@@ -140,14 +136,20 @@
     }
   }
   .contact-us-btn {
-    padding-top: 5rem;
+    padding-top: 7rem;
     display: flex;
     justify-content: center;
-    align-items: center;
     a {
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      padding: 20px 60px;
       color: white;
       width: 160px;
       font-size: 20px;
+
       @include media-breakpoint-down(xs) {
         width: 160px;
         font-size: 12px;

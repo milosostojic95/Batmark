@@ -33,14 +33,25 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./about.html">O nama</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./services.html">Usluge</a>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdown"
+                    data-toggle="dropdown"
+                    href="./services.html"
+                    >Usluge</a
+                  >
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="./service-one.html">Izrada alata</a></li>
+                    <li><a class="dropdown-item" href="./service-two.html">Izrada alata</a></li>
+                    <li><a class="dropdown-item" href="./service-three.html">Izrada alata</a></li>
+                  </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Galerija</a>
+                  <a class="nav-link" href="./gallery.html">Galerija</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Kontakt</a>
+                  <a class="nav-link btn-secondary contact-btn" href="./contact.html">Kontakt</a>
                 </li>
               </ul>
             </div>
@@ -49,12 +60,7 @@
       </div>
     </div>
     <main class="service-one-page">
-      <div
-        class="service-item-hero"
-        style="
-          background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/hero-img-2.png');
-        "
-      >
+      <div class="service-item-hero">
         <div class="service-item-hero-wrapper d-flex align-items-end">
           <div class="container">
             <div class="row">
@@ -251,9 +257,7 @@
           <h1 class="pl-3">Lorem</h1>
           <div class="row pt-3">
             <div class="col-8">
-              <p>
-                U koliko imate pitanja kontaktirajte nas!
-              </p>
+              <p>U koliko imate pitanja kontaktirajte nas!</p>
             </div>
             <div class="col-xs-12 col-sm-4">
               <div class="sign-up-btn d-flex justify-content-end">
