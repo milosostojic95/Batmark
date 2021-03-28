@@ -10,26 +10,11 @@
       padding: 10px 0px 30px 10px;
       .item {
         background: $white;
-        width: 22%;
-        height: auto;
-        padding: 40px;
-        // img {
-        //  height: 80%;
-        //  width: 80%;
-        // }
-        // h3 {
-        //   font-size: 24px;
-        //   font-weight: bold;
-        //   color: $primary;
-        // }
-        // .item-description {
-        //   height: 100px;
-        //   display: flex;
-        //   align-items: flex-end;
-        //   p {
-        //     font-size: 14px;
-        //   }
-        // }
+        height: 220px;
+        padding: 30px 40px;
+        img {
+          height: 100%;
+        }
       }
     }
     .owl-dots {

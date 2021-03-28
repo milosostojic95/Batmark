@@ -19,31 +19,14 @@ import menuTrigger from './menutrigger';
 
     var trainingCarousel = $('.reference .slider .owl-carousel');
     trainingCarousel.owlCarousel({
-      items:1,
-      loop: true,
+      items:4,
       autoplay: false,
       smartSpeed: 1500,
-      margin: 30,
-      autoWidth: true,
+      loop: true,
+      margin: 10,
       autoplayHoverPause: true,
       dots: true,
-      responsive: {
-        0: {
-          items: 2,
-        },
-        576: {
-          items: 2,
-        },
-        768: {
-          items:2,
-        },
-        992: {
-          items:1,
-        },
-        1200: {
-          items:1,
-        }
-      }
+   
     })
     var testimonialCarousel = $('.why-batmark .testimonial-slider .owl-carousel');
     testimonialCarousel.owlCarousel({
