@@ -1,5 +1,5 @@
 .footer {
-  padding: 0px 0 60px 0;
+  padding: 0px 0 20px 0;
   background-color: $dark-grey;
   color: #d8d8d8;
   font-weight: 300;
@@ -8,14 +8,15 @@
     padding: 120px 0px;
     background-color: #fcfbfb;
     color: $black;
-    h1 {
-      font-size: 36px;
+    h2 {
       font-weight: bold;
       font-family: $headingFontFamily;
+      color: $dark-grey;
     }
     p {
       font-size: 24px;
       font-family: $bodyFontFamily;
+      color: $grey;
     }
     .sign-up-btn {
       @include media-breakpoint-down(sm) {
