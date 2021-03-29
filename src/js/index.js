@@ -4,8 +4,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import '../scss/main.scss';
 
 // owl carousel
-(function($) {
-  $(document).ready(function(){
+(function ($) {
+  $(document).ready(function () {
     var homeSlider = $('.hero-slider .owl-carousel');
     homeSlider.owlCarousel({
       loop: true,
@@ -17,7 +17,7 @@ import '../scss/main.scss';
 
     var trainingCarousel = $('.reference .slider .owl-carousel');
     trainingCarousel.owlCarousel({
-      items:4,
+      items: 4,
       autoplay: false,
       smartSpeed: 1500,
       loop: true,
@@ -39,7 +39,7 @@ import '../scss/main.scss';
 
     var trainingslCarousel = $('.gallery-slider .testimonial-slider-gallery .owl-carousel');
     trainingslCarousel.owlCarousel({
-      items:2,
+      items: 2,
       loop: true,
       autoplay: false,
       smartSpeed: 1500,
@@ -78,15 +78,17 @@ import '../scss/main.scss';
 let galleryImages = document.querySelectorAll('.gallery-item');
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
+const body = document.body;
 
-if(galleryImages) {
-  galleryImages.forEach((image, index)=>{
-    image.addEventListener('click',()=>{
+if (galleryImages) {
+  galleryImages.forEach((image, index) => {
+    image.addEventListener('click', () => {
       // taking img src from css
+      body.classList.add('overflow-hidden')
       let getElementCss = window.getComputedStyle(image);
       let getFullImgUrl = getElementCss.getPropertyValue('background-image');
       let getImgUrlPos = getFullImgUrl.split('/images/');
-      let setNewImgUrl = getImgUrlPos[1].replace('")','');
+      let setNewImgUrl = getImgUrlPos[1].replace('")', '');
 
       getLatestOpenedImg = index + 1;
       //create div element for image
@@ -99,10 +101,10 @@ if(galleryImages) {
       // adding src of image to element
       let newImg = document.createElement('img');
       newImgWindow.appendChild(newImg);
-      newImg.setAttribute('src','../images/'+setNewImgUrl);
-      newImg.setAttribute('id','current-img');
+      newImg.setAttribute('src', '../images/' + setNewImgUrl);
+      newImg.setAttribute('id', 'current-img');
 
-      newImg.addEventListener('load',() => {
+      newImg.addEventListener('load', () => {
         // next btn
         let imgWidth = newImg.width;
         let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
@@ -121,23 +123,23 @@ if(galleryImages) {
           let calcNewImg;
           calcNewImg = getLatestOpenedImg + 1;
 
-          if(calcNewImg > galleryImages.length) {
+          if (calcNewImg > galleryImages.length) {
             calcNewImg = 1;
           }
-          newImg.setAttribute('src','../images/img'+ calcNewImg +'.jpg');
+          newImg.setAttribute('src', '../images/img' + calcNewImg + '.jpg');
           newImg.setAttribute('id', 'current-img');
           getLatestOpenedImg = calcNewImg;
-             //position nexxtbtn and prev btn after images load
-          newImg.addEventListener('load',() => {
+          //position nexxtbtn and prev btn after images load
+          newImg.addEventListener('load', () => {
             let imgWidth = newImg.width;
             let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
             let nextBtn = document.querySelector('.img-btn-next');
-            nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;' ;
+            nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;';
             let prevBtn = document.querySelector('.img-btn-prev');
-            prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
+            prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;';
           });
         });
-        nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;' ;
+        nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;';
 
         // prev btn
         let prevBtn = document.createElement('a');
@@ -154,38 +156,47 @@ if(galleryImages) {
           let calcNewImg;
           calcNewImg = getLatestOpenedImg - 1;
 
-          if(calcNewImg < 1) {
+          if (calcNewImg < 1) {
             calcNewImg = galleryImages.length;
           }
-          newImg.setAttribute('src','../images/img'+ calcNewImg +'.jpg');
+          newImg.setAttribute('src', '../images/img' + calcNewImg + '.jpg');
           newImg.setAttribute('id', 'current-img');
           getLatestOpenedImg = calcNewImg;
-             //position nexxtbtn and prev btn after images load
-          newImg.addEventListener('load',() => {
+          //position nexxtbtn and prev btn after images load
+          newImg.addEventListener('load', () => {
             let imgWidth = newImg.width;
             let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
             let nextBtn = document.querySelector('.img-btn-next');
-            nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;' ;
+            nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;';
             let prevBtn = document.querySelector('.img-btn-prev');
-            prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
+            prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;';
           });
         });
-        prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;' ;
+        prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;';
 
       });
       // funcstion to close modal if outside click
-      newImgWindow.addEventListener('click',(e)=>{
-        if(e.target == newImgWindow) {
+      newImgWindow.addEventListener('click', (e) => {
+        if (e.target == newImgWindow) {
+          body.classList.remove('overflow-hidden')
           newImgWindow.remove();
           document.querySelector('.img-btn-next').remove();
           document.querySelector('.img-btn-prev').remove();
+        }
+      })
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          body.classList.remove('overflow-hidden'),
+          document.querySelector('.img-window').remove(),
+          document.querySelector('.img-btn-next').remove(),
+          document.querySelector('.img-btn-prev').remove()
         }
       })
     });
   });
 }
 // preloader
-window.addEventListener('load',() =>{
+window.addEventListener('load', () => {
   const preloader = document.querySelector('.preloader');
   preloader.classList.add('loader-finish');
 });
@@ -194,21 +205,25 @@ window.addEventListener('load',() =>{
 const contactText = document.querySelectorAll('.form-control');
 const labelText = document.querySelectorAll('label');
 
-contactText.forEach((form,index) => {
-  form.addEventListener('click',function() {
+contactText.forEach((form, index) => {
+  form.addEventListener('click', function () {
     labelText[index].style.top = '0px';
     labelText[index].style.fontSize = '16px';
   });
 })
 
 
-document.addEventListener('scroll',() => {
+document.addEventListener('scroll', () => {
   const navBar = document.querySelector('.navigation');
   const scroll = window.scrollY;
-  if(scroll >= window.innerHeight / 3) {
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+  if (scroll >= window.innerHeight / 3) {
     navBar.classList.add('nav-color')
+    dropdownMenu.classList.remove('bg-transparent')
+
   } else {
     navBar.classList.remove('nav-color')
+    dropdownMenu.classList.add('bg-transparent')
   }
 })
 

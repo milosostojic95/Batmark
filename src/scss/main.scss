@@ -3,7 +3,6 @@ $secondary: #00A19A;
 $dark-grey: #3C3C3B;
 $grey: #666e82;
 @import '~bootstrap/scss/bootstrap';
-@import './galleryhome/variables/galleryvariables';
 
 //global scss
 @import './base/base';
@@ -26,8 +25,8 @@ $grey: #666e82;
 @import './homepage/testemonials';
 
 
-@import './galleryhome/sections/galleryhome';
-@import './galleryhome/sections/galleryintro';
+@import './gallery/galleryhome';
+@import './contact/contact-hero';
 
 
 
