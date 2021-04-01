@@ -1,18 +1,54 @@
 .contact-hero {
-  min-height: 700px;
+  min-height: 500px;
   padding-top: 12rem;
-  background-image: url('../images/contactpage/pexels-miguel-á-padriñán-1591062.jpg');
+  background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0.3) 90%), url('../images/contactpage/contact-details-3381225_1280.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -80px;
   color: white;
+  h1 {
+    font-size: 64px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 24px;
+  }
   .contact-form {
-    background-color: $primary;
+    margin-bottom: -7rem;
+    background-color: $white;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    box-shadow: 0px 3px 9px 2px rgba(46, 61, 98, 0.2);
+    padding: 80px 60px;
+    input {
+      margin: 0.5rem 0;
+    }
+    button {
+      overflow: hidden;
+      height: 64px;
+      width: 230px;
+      padding: 0;
+      background-color: $secondary;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      border-color: $secondary;
+    }
+  }
 }
+.contact-info {
+  padding: 160px 0 120px;
+  color: grey;
+  font-size: 1.2rem;
+  .contact-item {
+    padding: 7px 0;
+  }
 }

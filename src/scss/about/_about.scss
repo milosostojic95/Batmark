@@ -149,6 +149,9 @@
       color: white;
       width: 160px;
       font-size: 20px;
+      &:hover {
+        background-color: $primary;
+      }
 
       @include media-breakpoint-down(xs) {
         width: 160px;
