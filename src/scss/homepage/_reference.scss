@@ -2,9 +2,14 @@
   overflow: hidden;
   color: $dark;
   @include media-breakpoint-up(xs) {
-    padding: 120px 0 0;
+    padding: 120px 0 80px;
+  }
+  p {
+    color: $grey;
+    font-size: 1rem;
   }
   .slider {
+    margin-top: 4rem;
     .owl-stage-outer {
       padding: 10px 0px 30px 10px;
       .item {
@@ -19,6 +24,7 @@
           &:hover {
             filter: grayscale(0);
             -webkit-filter: grayscale(0);
+            cursor: pointer;
           }
         }
       }
@@ -30,8 +36,9 @@
 
   .reference-btn {
     a {
-      font-size: 20px;
-      color: $white;
+      font-size: 1rem;
+      font-weight: bold;
+      color: $secondary;
       @include media-breakpoint-up(sm) {
         width: 180px;
       }

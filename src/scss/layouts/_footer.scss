@@ -1,52 +1,29 @@
 .footer {
-  padding: 0px 0 20px 0;
-  background-color: $secondary;
+  background-color: $dark-grey;
   color: $white;
   font-weight: 300;
   font-size: 15px;
   .contact-footer {
-    padding: 120px 0px;
-    background-color: $primary;
+    padding: 30px 0px;
+    background-color: $secondary;
     color: $white;
-    h2 {
-      font-weight: bold;
-      font-family: $headingFontFamily;
-      text-shadow: 0 2px 0 rgb( 0,0, .12);
-    }
     p {
-      font-size: 24px;
+      font-size: 1.2rem;
       font-family: $bodyFontFamily;
+    } 
+    .footer-brand {
+      height: 50px;
     }
-    .sign-up-btn {
-      @include media-breakpoint-down(sm) {
-        margin-top: 1rem;
-      }
-      @include media-breakpoint-down(xs) {
-        justify-content: flex-start !important;
-      }
-      a {
-        margin-left: 2rem;
-        border-radius: 50px;
-        font-size: 1rem;
-        padding: 20px 60px;
-        -webkit-border-radius: 50px;
-        -moz-border-radius: 50px;
-        -ms-border-radius: 50px;
-        -o-border-radius: 50px;
-        @include media-breakpoint-down(xs) {
-          width: 160px;
-          font-size: 12px;
-        }
-        @include media-breakpoint-up(xs) {
-          width: 180px;
-        }
-        @include media-breakpoint-up(lg) {
-          width: 255px;
+    .navbar-nav {
+      .navbar-item {
+        text-align: right;
+        .navbar-link {
+          font-size: 1.2rem;
+          text-align: right;
+          color: $white;
+          text-decoration: none;
         }
       }
-    }
-    & + .container {
-      padding-top: 80px;
     }
   }
   // .social-links {
@@ -61,31 +38,13 @@
   //   }
   // }
   .bottom {
+    padding: 30px 0;
     @include media-breakpoint-down(md) {
       .col-12 {
         order: 2;
         text-align: center;
         & + .col-12 {
           order: 1;
-          margin-bottom: 30px;
-        }
-      }
-    }
-    .footer-menu {
-      justify-content: flex-end;
-      @include media-breakpoint-down(md) {
-        justify-content: center;
-      }
-      .nav-item {
-        list-style: none;
-        a {
-          padding: 0;
-          font-size: 1rem;
-          color: $white;
-        }
-        margin-left: 30px;
-        &:first-child {
-          margin-left: 0px;
         }
       }
     }

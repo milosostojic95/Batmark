@@ -1,6 +1,6 @@
 .about-us-hero {
-  height: 70vh;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0.3) 90%),
+  height: 80vh;
+  background-image: linear-gradient(0deg, rgba($primary, 0.4) 0%, rgba($secondary, 0.4) 90%),
     url('../images/home/homeintro.jpg');
   background-position: center center;
   background-size: cover;
@@ -31,9 +31,9 @@
 
 .who-we-are {
   padding: 120px 60px 80px;
-  h1 {
-    font-size: 36px;
+  h2 {
     font-weight: bold;
+    color: $dark-grey;
   }
   p {
     font-size: 24px;
@@ -53,10 +53,10 @@
 
 .our-people {
   padding: 80px 0;
-  h1 {
-    font-size: 36px;
+  h2 {
     font-weight: bold;
-    font-family: $headingFontFamily;
+    color: $dark-grey;
+    margin-bottom: 8rem;
   }
   img {
     border-radius: 5px;
@@ -67,6 +67,8 @@
     box-shadow: 0px 3px 9px 2px rgba(46, 61, 98, 0.2);
   }
   .img-text-left {
+    padding-bottom: 8rem;
+
     .employee {
       position: relative;
 
@@ -101,7 +103,7 @@
     }
   }
   .img-text-right {
-    padding-top: 7rem;
+    padding-bottom: 7rem;
     .employee {
       position: relative;
 

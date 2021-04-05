@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0%,rgba(255,255,255,.3) 90%), url('../images/home/homeintro.jpg');
+  background-image: linear-gradient(0deg, rgba($primary, 0.3) 0%, rgba($secondary, 0.4) 90%), url('../images/home/homeintro.jpg');
 
   .service-item-hero-wrapper {
     height: 100%;
@@ -58,6 +58,10 @@
     margin-top: 3rem;
   }
 
+  img {
+    box-shadow: 0px 3px 9px 2px rgba(46, 61, 98, 0.3);
+  }
+
  .how-text {
    @include media-breakpoint-down(md) {
      margin-bottom: 2rem;
@@ -72,11 +76,6 @@
      margin-top: 3rem;
    }
 
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-  }
-
   p {
     @include media-breakpoint-up(md) {
       font-size: 20px;
@@ -86,17 +85,6 @@
     }
   }
  }
-
-  .how-btn {
-    a {
-      @include media-breakpoint-up(xs) {
-       width: 200px;
-      }
-      @include media-breakpoint-up(lg) {
-        width: 255px;
-      }
-    }
-  }
 }
 
 .about-services {
@@ -105,12 +93,6 @@
   }
   @include media-breakpoint-up(lg) {
     padding: 120px 0 ;
-  }
-
-  h1 {
-    margin-bottom: 2.5rem;
-    font-size: 36px;
-    font-weight: bold;
   }
   p {
     margin-bottom: 2rem;
@@ -124,18 +106,16 @@
 }
 .what-involved {
   background-color: #FCFBFB;
+  box-shadow: 0px 3px 9px 2px rgba(46, 61, 98, 0.08);
   @include media-breakpoint-down(lg) {
     padding: 80px 0 0;
     margin-bottom: 80px;
   }
   @include media-breakpoint-up(lg) {
     padding: 120px 0 0;
-    margin-bottom: 80px;
+    margin-bottom: 150px;
   }
-  h1 {
-    font-weight: bold;
-    font-size: 36px;
-  }
+
   .involved-box {
     background-color: $white;
     height: 205px;
@@ -208,7 +188,7 @@
       }
     }
     .box-footer {
-      background-color: $primary;
+      background: linear-gradient(90deg, rgba($primary, 0.8), rgba($secondary, 0.8));
       color: #FFFFFF;
       height: 65px;
 
@@ -228,43 +208,3 @@
   }
 }
 
-.other-trainings {
-  @include media-breakpoint-up(xs) {
-    padding: 80px 0;
-  }
-  @include media-breakpoint-up(md) {
-    padding: 120px 0;
-  }
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-  }
-  .trainings-box {
-    box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.07);
-    padding: 50px 30px;
-    height: 388px;
-
-    h3 {
-      @include media-breakpoint-down(md) {
-        font-size: 18px;
-      }
-      @include media-breakpoint-up(md) {
-        font-size: 20px;
-      }
-      @include media-breakpoint-up(lg) {
-        font-size: 24px;
-      }
-    }
-    p {
-      @include media-breakpoint-down(md) {
-        font-size: 16px;
-      }
-      @include media-breakpoint-up(md) {
-        font-size: 16px;
-      }
-      @include media-breakpoint-up(lg) {
-        font-size: 18px;
-      }
-    }
-  }
-}

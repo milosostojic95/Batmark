@@ -213,17 +213,16 @@ contactText.forEach((form, index) => {
 })
 
 
-document.addEventListener('scroll', () => {
-  const navBar = document.querySelector('.navigation');
-  const scroll = window.scrollY;
-  const dropdownMenu = document.querySelector('.dropdown-menu');
-  if (scroll >= window.innerHeight / 3) {
-    navBar.classList.add('nav-color')
-    dropdownMenu.classList.remove('bg-transparent')
+// document.addEventListener('scroll', () => {
+//   const navBar = document.querySelector('.navbar-brand > img');
+//   const scroll = window.scrollY;
+//   const dropdownMenu = document.querySelector('.dropdown-menu');
+//   console.log(navBar)
+//   if (scroll >= window.innerHeight / 3) {
+//     navBar.setAttribute('src','images/bm-h-color.svg')
 
-  } else {
-    navBar.classList.remove('nav-color')
-    dropdownMenu.classList.add('bg-transparent')
-  }
-})
+//   } else {
+//     navBar.setAttribute('src','images/favicon.svg')
+//   }
+// })
 
