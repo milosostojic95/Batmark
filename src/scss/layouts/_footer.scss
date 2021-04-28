@@ -10,18 +10,22 @@
     p {
       font-size: 1.2rem;
       font-family: $bodyFontFamily;
-    } 
+    }
     .footer-brand {
       height: 50px;
     }
     .navbar-nav {
       .navbar-item {
         text-align: right;
+        @include media-breakpoint-down(sm) {
+          text-align: left;
+        }
         .navbar-link {
           font-size: 1.2rem;
-          text-align: right;
           color: $white;
           text-decoration: none;
+
+
         }
       }
     }

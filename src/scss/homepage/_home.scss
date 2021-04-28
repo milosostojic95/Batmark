@@ -9,8 +9,12 @@
 
     .slider-content {
       height: 100%;
-      padding-bottom: 5rem;
+      padding-bottom: 8rem;
       color: #fff;
+
+      @include media-breakpoint-down(md) {
+        padding-bottom: 8rem;
+      }
       h1 {
         font-weight: bold;
         @include media-breakpoint-up(xs) {
@@ -22,11 +26,8 @@
       }
 
       p {
-        @include media-breakpoint-up(xs) {
-          font-size: 24px;
-        }
         @include media-breakpoint-up(md) {
-          font-size: 32px;
+          font-size: 1.5rem;
         }
       }
     }

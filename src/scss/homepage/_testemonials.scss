@@ -8,11 +8,6 @@
     color: $dark-grey;
   }
 
-  @include media-breakpoint-down(md) {
-    margin-top: -20rem;
-  }
-
-
   .title {
     text-decoration: none;
     h4 {
