@@ -1,6 +1,6 @@
 $primary: #4d1d6e;
-$secondary: #00A19A;
-$dark-grey: #3C3C3B;
+$secondary: #00a19a;
+$dark-grey: #3c3c3b;
 $grey: #666e82;
 @import '~bootstrap/scss/bootstrap';
 
@@ -23,14 +23,9 @@ $grey: #666e82;
 @import './homepage/about';
 @import './services/services';
 @import './homepage/testemonials';
-
+@import './reference/reference';
 
 @import './gallery/galleryhome';
 @import './contact/contact-hero';
 
-
-
-
-
-@import './about/about'
-
+@import './about/about';
