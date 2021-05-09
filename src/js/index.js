@@ -11,6 +11,7 @@ import '../scss/main.scss';
       loop: true,
       autoplay: true,
       smartSpeed: 1500,
+      autoplayTimeout: 3500,
       items: 1,
       autoplayHoverPause: true
     });
@@ -47,6 +48,18 @@ import '../scss/main.scss';
       }
 
     });
+
+    var technologyCarousel = $('.technology .technology-slider .owl-carousel');
+    technologyCarousel.owlCarousel({
+      loop: true,
+      autoplay: true,
+      smartSpeed: 1500,
+      autoplayTimeout: 3000,
+      margin: 30,
+      autoplayHoverPause: true,
+      dots: false,
+    });
+
     var owlTestemonial = $('.studies-testemonials .testemonial-slider .owl-carousel');
     owlTestemonial.owlCarousel({
       loop: false,
@@ -56,40 +69,9 @@ import '../scss/main.scss';
       mouseDrag: false,
       items: 1,
       navText: ["<img class='arrow-left'/>", "<img class='arrow-right'/>"],
-    })
+    });
 
-    var trainingslCarousel = $('.gallery-slider .testimonial-slider-gallery .owl-carousel');
-    trainingslCarousel.owlCarousel({
-      items: 2,
-      loop: true,
-      autoplay: false,
-      smartSpeed: 1500,
-      autoWidth: true,
-      autoplayHoverPause: true,
-      center: true,
-      dots: true,
-      responsive: {
-        0: {
-          items: 2,
-          margin: 20,
-        },
-        578: {
-          items: 2,
-          margin: 30,
-        },
-        768: {
-          items: 2,
-          margin: 30,
-        },
-        992: {
-          items: 2,
-          margin: 50,
-        },
-        1200: {
-          margin: 70,
-        }
-      }
-    })
+
   });
 }(jQuery));
 
@@ -208,9 +190,9 @@ if (galleryImages) {
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
           body.classList.remove('overflow-hidden'),
-          document.querySelector('.img-window').remove(),
-          document.querySelector('.img-btn-next').remove(),
-          document.querySelector('.img-btn-prev').remove()
+            document.querySelector('.img-window').remove(),
+            document.querySelector('.img-btn-next').remove(),
+            document.querySelector('.img-btn-prev').remove()
         }
       })
     });

@@ -10,6 +10,8 @@
   .project-awaits-items {
     padding: 90px 0;
 
+
+
     .project-awaits-single-item {
       width: 90%;
       position: relative;
@@ -125,7 +127,7 @@
           }
         }
 
-        background: linear-gradient(0deg, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
       }
 
       @include media-breakpoint-down(lg) {
