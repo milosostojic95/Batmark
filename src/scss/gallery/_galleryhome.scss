@@ -4,35 +4,17 @@
 
   .gallery-wrapper {
     margin-top: 5rem;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'img1 img2 img3 img4'
+      'img5 img6 img3 img7'
+      'img8 img9 img10 img11'
+      'img12 img13 img14 img15';
 
-    @include breakpoint(mobile) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto;
-      grid-gap: 5px;
-      grid-template-areas:
-        'img1 img2'
-        'img3 img4'
-        'img3 img5'
-        'img6 img7';
-    }
-    @include breakpoint(smallTablet) {
-      grid-gap: 10px;
-    }
-
-    @include breakpoint(tablet) {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas:
-        'img1 img2 img3'
-        'img4 img5 img3'
-        'img6 img7 .';
-    }
-
-    @include breakpoint(laptop) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-areas:
-        'img1 img2 img3 img4'
-        'img5 img6 img3 img7';
+    @include media-breakpoint-up(sm) {
     }
 
     .gallery-item {
@@ -48,7 +30,7 @@
 
       @include breakpoint(smallTablet) {
         margin: 0;
-        height: 300px;
+        height: 250px;
       }
 
       &:hover .gallery-title {
@@ -69,6 +51,7 @@
           font-size: 1.125rem;
           text-decoration: none;
           text-transform: uppercase;
+          color: $secondary;
         }
       }
     }
@@ -92,7 +75,7 @@
       }
 
       @include breakpoint(smallTablet) {
-        height: 610px;
+        height: 515px;
       }
     }
 
@@ -115,6 +98,42 @@
       grid-area: img7;
       background-image: url('../images/gallery/img7.jpg');
     }
+    .img8 {
+      grid-area: img8;
+      background-image: url('../images/gallery/img8.jpg');
+    }
+    .img9 {
+      grid-area: img9;
+      background-image: url('../images/gallery/img9.jpg');
+    }
+    .img10 {
+      grid-area: img10;
+      background-image: url('../images/gallery/img10.jpg');
+    }
+    .img11 {
+      grid-area: img11;
+      background-image: url('../images/gallery/img11.jpg');
+    }
+    .img12 {
+      grid-area: img12;
+      background-image: url('../images/gallery/img12.jpg');
+    }
+    .img13 {
+      grid-area: img13;
+      background-image: url('../images/gallery/img13.jpg');
+    }
+    .img14 {
+      grid-area: img14;
+      background-image: url('../images/gallery/img14.jpg');
+    }
+    .img15 {
+      grid-area: img15;
+      background-image: url('../images/gallery/img15.jpg');
+    }
+    .img16 {
+      grid-area: img16;
+      background-image: url('../images/gallery/img10.jpg');
+    }
   }
 }
 
@@ -124,12 +143,12 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, 0.9);
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 10000;
 
   img {
     max-height: 80vh;
