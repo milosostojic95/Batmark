@@ -67,7 +67,7 @@ module.exports =  {
                 ],
             },
             {
-                test: /\.(svg|png|jpe?g|gif|ico)$/,
+                test: /\.(mp4|svg|png|jpe?g|gif|ico)$/,
                 use: [
                 {
                     loader: 'file-loader',
@@ -83,6 +83,9 @@ module.exports =  {
                 test: /\.(html)$/,
                 use: {
                 loader: 'html-loader',
+                options: {
+                  attrs: [":src"]
+                }
                 }
             },
             {
