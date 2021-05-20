@@ -75,12 +75,10 @@ import '../scss/main.scss';
   });
 }(jQuery));
 
-
-
 //gallery popup
 let galleryImages = document.querySelectorAll('.gallery-item');
-let getLatestOpenedImg;
-let windowWidth = window.innerWidth;
+// let getLatestOpenedImg;
+// let windowWidth = window.innerWidth;
 const body = document.body;
 
 if (galleryImages) {
@@ -93,7 +91,6 @@ if (galleryImages) {
       let getImgUrlPos = getFullImgUrl.split('/images/');
       let setNewImgUrl = getImgUrlPos[1].replace('")', '');
 
-      getLatestOpenedImg = index + 1;
       //create div element for image
       let container = document.body;
       let newImgWindow = document.createElement('div');
