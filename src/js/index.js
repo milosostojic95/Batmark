@@ -99,6 +99,11 @@ if (galleryImages) {
       let newImgWindow = document.createElement('div');
       container.appendChild(newImgWindow);
       newImgWindow.setAttribute('class', 'img-window');
+      let closeBtn = document.createElement('a');
+      let closeText = document.createTextNode('X');
+      closeBtn.appendChild(closeText);
+      container.appendChild(closeBtn);
+      closeBtn.setAttribute('class', 'close-btn')
 
 
       // adding src of image to element
@@ -107,94 +112,100 @@ if (galleryImages) {
       newImg.setAttribute('src', '../images/' + setNewImgUrl);
       newImg.setAttribute('id', 'current-img');
 
-      newImg.addEventListener('load', () => {
-        // next btn
-        let imgWidth = newImg.width;
-        let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
+      // newImg.addEventListener('load', () => {
+      //   // next btn
+      //   let imgWidth = newImg.width;
+      //   let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
 
-        let nextBtn = document.createElement('a');
-        let nextText = document.createTextNode('next');
-        nextBtn.appendChild(nextText);
-        container.appendChild(nextBtn);
-        nextBtn.setAttribute('class', 'img-btn-next');
-        nextBtn.addEventListener('click', () => {
-          document.querySelector('#current-img').remove();
+      //   let nextBtn = document.createElement('a');
+      //   let nextText = document.createTextNode('Next');
+      //   nextBtn.appendChild(nextText);
+      //   container.appendChild(nextBtn);
+      //   nextBtn.setAttribute('class', 'img-btn-next');
+      //   nextBtn.addEventListener('click', () => {
+      //     document.querySelector('#current-img').remove();
 
-          let getImgWindow = document.querySelector('.img-window');
-          let newImg = document.createElement('img');
-          getImgWindow.appendChild(newImg);
-          let calcNewImg;
-          calcNewImg = getLatestOpenedImg + 1;
+      //     let getImgWindow = document.querySelector('.img-window');
+      //     let newImg = document.createElement('img');
+      //     getImgWindow.appendChild(newImg);
+      //     let calcNewImg;
+      //     calcNewImg = getLatestOpenedImg + 1;
 
-          if (calcNewImg > galleryImages.length) {
-            calcNewImg = 1;
-          }
-          newImg.setAttribute('src', '../images/img' + calcNewImg + '.jpg');
-          newImg.setAttribute('id', 'current-img');
-          getLatestOpenedImg = calcNewImg;
-          //position nexxtbtn and prev btn after images load
-          newImg.addEventListener('load', () => {
-            let imgWidth = newImg.width;
-            let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
-            let nextBtn = document.querySelector('.img-btn-next');
-            nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;';
-            let prevBtn = document.querySelector('.img-btn-prev');
-            prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;';
-          });
-        });
-        nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;';
+      //     if (calcNewImg > galleryImages.length) {
+      //       calcNewImg = 1;
+      //     }
+      //     newImg.setAttribute('src', '../images/img' + calcNewImg + '.jpg');
+      //     newImg.setAttribute('id', 'current-img');
+      //     getLatestOpenedImg = calcNewImg;
+      //     //position nexxtbtn and prev btn after images load
+      //     newImg.addEventListener('load', () => {
+      //       let imgWidth = newImg.width;
+      //       let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
+      //       let nextBtn = document.querySelector('.img-btn-next');
+      //       nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;';
+      //       let prevBtn = document.querySelector('.img-btn-prev');
+      //       prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;';
+      //     });
+      //   });
+      //   nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;';
 
-        // prev btn
-        let prevBtn = document.createElement('a');
-        let prevText = document.createTextNode('prev');
-        prevBtn.appendChild(prevText);
-        container.appendChild(prevBtn);
-        prevBtn.setAttribute('class', 'img-btn-prev');
-        prevBtn.addEventListener('click', () => {
-          document.querySelector('#current-img').remove();
+      //   // prev btn
+      //   let prevBtn = document.createElement('a');
+      //   let prevText = document.createTextNode('Prev');
+      //   prevBtn.appendChild(prevText);
+      //   container.appendChild(prevBtn);
+      //   prevBtn.setAttribute('class', 'img-btn-prev');
+      //   prevBtn.addEventListener('click', () => {
+      //     document.querySelector('#current-img').remove();
 
-          let getImgWindow = document.querySelector('.img-window');
-          let newImg = document.createElement('img');
-          getImgWindow.appendChild(newImg);
-          let calcNewImg;
-          calcNewImg = getLatestOpenedImg - 1;
+      //     let getImgWindow = document.querySelector('.img-window');
+      //     let newImg = document.createElement('img');
+      //     getImgWindow.appendChild(newImg);
+      //     let calcNewImg;
+      //     calcNewImg = getLatestOpenedImg - 1;
 
-          if (calcNewImg < 1) {
-            calcNewImg = galleryImages.length;
-          }
-          newImg.setAttribute('src', '../images/img' + calcNewImg + '.jpg');
-          newImg.setAttribute('id', 'current-img');
-          getLatestOpenedImg = calcNewImg;
-          //position nexxtbtn and prev btn after images load
-          newImg.addEventListener('load', () => {
-            let imgWidth = newImg.width;
-            let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
-            let nextBtn = document.querySelector('.img-btn-next');
-            nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;';
-            let prevBtn = document.querySelector('.img-btn-prev');
-            prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;';
-          });
-        });
-        prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;';
+      //     if (calcNewImg < 1) {
+      //       calcNewImg = galleryImages.length;
+      //     }
+      //     newImg.setAttribute('src', '../images/img' + calcNewImg + '.jpg');
+      //     newImg.setAttribute('id', 'current-img');
+      //     getLatestOpenedImg = calcNewImg;
+      //     //position nexxtbtn and prev btn after images load
+      //     newImg.addEventListener('load', () => {
+      //       let imgWidth = newImg.width;
+      //       let caclImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
+      //       let nextBtn = document.querySelector('.img-btn-next');
+      //       nextBtn.style.cssText = 'right:' + caclImgToEdge + 'px;';
+      //       let prevBtn = document.querySelector('.img-btn-prev');
+      //       prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;';
+      //     });
+      //   });
+      //   prevBtn.style.cssText = 'left:' + caclImgToEdge + 'px;';
 
-      });
+      // });
       // funcstion to close modal if outside click
       newImgWindow.addEventListener('click', (e) => {
         if (e.target == newImgWindow) {
           body.classList.remove('overflow-hidden')
           newImgWindow.remove();
-          document.querySelector('.img-btn-next').remove();
-          document.querySelector('.img-btn-prev').remove();
+          closeBtn.remove();
+          // document.querySelector('.img-btn-next').remove();
+          // document.querySelector('.img-btn-prev').remove();
         }
       })
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          body.classList.remove('overflow-hidden'),
-            document.querySelector('.img-window').remove(),
-            document.querySelector('.img-btn-next').remove(),
-            document.querySelector('.img-btn-prev').remove()
-        }
+      closeBtn.addEventListener('click', () => {
+        body.classList.remove('overflow-hidden')
+        newImgWindow.remove();
+        closeBtn.remove();
       })
+      // document.addEventListener('keydown', (e) => {
+      //   if (e.key === 'Escape') {
+      //     body.classList.remove('overflow-hidden'),
+      //       document.querySelector('.img-window').remove(),
+      //       document.querySelector('.img-btn-next').remove(),
+      //       document.querySelector('.img-btn-prev').remove()
+      //   }
+      // })
     });
   });
 }
@@ -204,28 +215,14 @@ window.addEventListener('load', () => {
   preloader.classList.add('loader-finish');
 });
 
-// contact animation
-const contactText = document.querySelectorAll('.form-control');
-const labelText = document.querySelectorAll('label');
-
-contactText.forEach((form, index) => {
-  form.addEventListener('click', function () {
-    labelText[index].style.top = '0px';
-    labelText[index].style.fontSize = '16px';
-  });
+document.addEventListener('scroll', () => {
+  const navBar = document.querySelector('.navigation');
+  const scroll = window.scrollY;
+  const navLink = document.querySelectorAll('.nav-item .nav-link');
+  if (scroll / 2 > 250) {
+    navBar.classList.add('color-grey')
+  } else {
+    navBar.classList.remove('color-grey')
+  }
 })
-
-
-// document.addEventListener('scroll', () => {
-//   const navBar = document.querySelector('.navbar-brand > img');
-//   const scroll = window.scrollY;
-//   const dropdownMenu = document.querySelector('.dropdown-menu');
-//   console.log(navBar)
-//   if (scroll >= window.innerHeight / 3) {
-//     navBar.setAttribute('src','images/bm-h-color.svg')
-
-//   } else {
-//     navBar.setAttribute('src','images/favicon.svg')
-//   }
-// })
 

@@ -10,7 +10,7 @@
 // }
 
 .navigation {
-  background-color: rgba($white,.8);
+  background-color: rgba($white, 0.4);
   box-shadow: 0px 3px 9px 2px rgba(46, 61, 98, 0.1);
 
   .nav-wrapper {
@@ -25,9 +25,12 @@
       .nav-item {
         padding: 5px;
         .nav-link {
-          color: $grey;
+          color: $white;
           font-size: 1.1rem;
           font-family: $headingFontFamily;
+          &:hover {
+            color: rgba($white, 0.7);
+          }
         }
         .contact-btn {
           color: $white;
@@ -41,6 +44,8 @@
         }
         .dropdown-menu {
           color: $white;
+          background-color: rgba($white, 0.4);
+          margin-top: 15px;
           .nav-link {
             &:hover {
               background-color: $secondary;
@@ -49,5 +54,33 @@
         }
       }
     }
+  }
+}
+
+.color-grey {
+  background-color: rgba($white, 0.8);
+  .nav-wrapper {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $grey !important;
+        }
+        .dropdown-menu {
+          color: $white;
+          background-color: rgba($white, 0.8);
+          .nav-link {
+            &:hover {
+              background-color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.gallery-nav {
+  background-color: rgba($white, 0.8);
+  .nav-link {
+    color: $grey !important;
   }
 }

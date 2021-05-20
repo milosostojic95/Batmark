@@ -45,6 +45,12 @@ h6 {
 // h1 {
 //   font-size: 3rem;
 // }
+
+h1 {
+  color: $dark-grey;
+  font-weight: bold;
+  font-size: 3.2rem;
+}
 h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -62,7 +68,7 @@ h4 {
   width: 100%;
   top: 0;
   left: 0;
-  background: $black;
+  background: $white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,6 +82,34 @@ h4 {
   img {
     height: 300px;
     width: 300px;
+    -webkit-animation: logo-rotation;
+    animation: logo-rotation;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.45, 0.55, 0.15, 1);
+    animation-timing-function: cubic-bezier(0.45, 0.55, 0.15, 1);
+  }
+  @-webkit-keyframes logo-rotation {
+    0% {
+      -webkit-transform: rotateY(0);
+      transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+    }
+  }
+  @keyframes logo-rotation {
+    0% {
+      -webkit-transform: rotateY(0);
+      transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+    }
   }
 }
 
@@ -88,26 +122,19 @@ h4 {
   pointer-events: none;
 }
 
-.img-btn-next {
-  display: block;
-  position: fixed;
-  top: 50%;
-  padding: 8px 10px;
-  border-radius: 4px;
-  background-color: #111111;
-  z-index: 500;
-  color: white;
-}
-
+.img-btn-next,
 .img-btn-prev {
   display: block;
   position: fixed;
   top: 50%;
   padding: 8px 10px;
   border-radius: 4px;
-  background-color: #111111;
-  z-index: 500;
+  z-index: 10001;
   color: white;
+  &:hover {
+    color: rgba($white, 0.7);
+    text-decoration: none;
+  }
 }
 
 .contact-action {
@@ -115,6 +142,9 @@ h4 {
   position: relative;
   padding: 120px 0;
   background: linear-gradient(90deg, rgba($secondary, 1), rgba($primary, 1));
+  h2 {
+    color: $white;
+  }
   &::after {
     content: '';
     position: absolute;
@@ -129,9 +159,7 @@ h4 {
     opacity: 0.3;
     z-index: 1;
   }
-  h2 {
-    color: $white;
-  }
+
   .contact-action-btn {
     z-index: 2;
     @include media-breakpoint-down(xl) {
@@ -183,5 +211,21 @@ h4 {
     bottom: -15px;
     left: 0;
     background: linear-gradient(90deg, rgba($primary, 0.8), rgba($secondary, 0.8));
+  }
+}
+
+.close-btn {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  background: $primary;
+  color: $white;
+  z-index: 10002;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  &:hover {
+    color: rgba($white, 0.8);
+    text-decoration: none;
   }
 }

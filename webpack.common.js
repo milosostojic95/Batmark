@@ -11,7 +11,7 @@ module.exports =  {
             template: './src/index.html'
           }),
           new HtmlWebpackPlugin({
-            filename: 'service-one.html',
+            filename: 'izrada-alata.html',
             template: './src/izrada-alata.html'
           }),
           new HtmlWebpackPlugin({

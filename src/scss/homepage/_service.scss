@@ -4,14 +4,10 @@
   z-index: 1;
   p {
     color: $grey;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
-
   .project-awaits-items {
     padding: 90px 0;
-
-
-
     .project-awaits-single-item {
       width: 90%;
       position: relative;
@@ -30,7 +26,6 @@
         display: block;
         padding-bottom: 110%;
       }
-
       .card-content {
         position: absolute;
         width: 100%;
@@ -135,7 +130,7 @@
       }
     }
     .project-one {
-      background-image: url('../images/service/serviceimg1.jpg');
+      background-image: url('../images/service/slide2.jpg');
     }
     .project-two {
       background-image: url('../images/service/serviceimg3.jpg');
