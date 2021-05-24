@@ -1,15 +1,15 @@
 .contact-hero {
-  min-height: 500px;
+  min-height: 700px;
   padding-top: 12rem;
-  background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0.3) 90%), url('../images/contactpage/contact-details-3381225_1280.jpg');
+  background-image: linear-gradient(0deg, rgba($primary, 1) 0%, rgba($secondary, .7) 90%);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -80px;
   color: white;
   h1 {
     font-size: 64px;
     font-weight: bold;
+    color: $white;
   }
   p {
     font-size: 24px;
@@ -45,10 +45,11 @@
   }
 }
 .contact-info {
-  padding: 160px 0 120px;
-  color: grey;
+  padding: 160px 0 0;
+  color: $grey;
   font-size: 1.2rem;
   .contact-item {
-    padding: 7px 0;
+    padding: 10px 0;
+    text-transform: uppercase;
   }
 }

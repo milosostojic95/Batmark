@@ -104,17 +104,30 @@
 
       .people-border {
         position: absolute;
-        top: -9%;
+        top: -8%;
         left: 50%;
         transform: translate(-50%, 8%);
         border: 7px solid $secondary;
         width: 400px;
         height: 180px;
         z-index: 100;
-        -webkit-transform: translate(-50%, 8%);
-        -moz-transform: translate(-50%, 8%);
-        -ms-transform: translate(-50%, 8%);
-        -o-transform: translate(-50%, 8%);
+
+        @include media-breakpoint-down(lg) {
+          top: -5%;
+          transform: translate(-50%, 5%);
+        }
+        @include media-breakpoint-down(md) {
+          left: 25%;
+          top: -12%;
+        }
+        @include media-breakpoint-down(sm) {
+          left: 30%;
+          top: -12%;
+        }
+        @include media-breakpoint-down(xs) {
+          left: 35%;
+          top: -12%;
+        }
       }
     }
     .people-text {
@@ -146,10 +159,22 @@
         width: 400px;
         height: 180px;
         z-index: 100;
-        -webkit-transform: translate(-50%, 8%);
-        -moz-transform: translate(-50%, 8%);
-        -ms-transform: translate(-50%, 8%);
-        -o-transform: translate(-50%, 8%);
+        @include media-breakpoint-down(lg) {
+          top: -5%;
+          transform: translate(-50%, 5%);
+        }
+        @include media-breakpoint-down(md) {
+          left: 25%;
+          top: -12%;
+        }
+        @include media-breakpoint-down(sm) {
+          left: 30%;
+          top: -12%;
+        }
+        @include media-breakpoint-down(xs) {
+          left: 35%;
+          top: -12%;
+        }
       }
     }
     .people-text {

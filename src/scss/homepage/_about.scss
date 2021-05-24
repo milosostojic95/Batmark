@@ -116,8 +116,8 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
-          text-align: center;
+          align-items: flex-start;
+          text-align: left;
           border-radius: 7px;
           -webkit-border-radius: 7px;
           -moz-border-radius: 7px;
@@ -128,7 +128,7 @@
           }
 
           img {
-            width: 50px;
+            width: 45px;
             height: auto;
             display: block;
             margin-bottom: 20px;

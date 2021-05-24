@@ -31,7 +31,7 @@ import '../scss/main.scss';
           margin: 20,
         },
         578: {
-          items: 3,
+          items: 2,
           margin: 30,
         },
         768: {
@@ -58,6 +58,27 @@ import '../scss/main.scss';
       margin: 30,
       autoplayHoverPause: true,
       dots: false,
+      responsive: {
+        0: {
+          items: 2,
+          margin: 20,
+        },
+        578: {
+          items: 2,
+          margin: 30,
+        },
+        768: {
+          items: 3,
+          margin: 30,
+        },
+        992: {
+          items: 4,
+          margin: 50,
+        },
+        1200: {
+          margin: 70,
+        }
+      }
     });
 
     var owlTestemonial = $('.studies-testemonials .testemonial-slider .owl-carousel');
