@@ -7,36 +7,36 @@ module.exports =  {
     entry: [require.resolve('./src/js/index.js')],
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: './src/index.html'
+            filename: 'pocetna.html',
+            template: './src/pocetna.html'
           }),
           new HtmlWebpackPlugin({
             filename: 'izrada-alata.html',
             template: './src/izrada-alata.html'
           }),
           new HtmlWebpackPlugin({
-            filename: 'service-two.html',
-            template: './src/service-two.html'
+            filename: 'servis-dorada-alata.html',
+            template: './src/servis-dorada-alata.html'
           }),
           new HtmlWebpackPlugin({
-            filename: 'service-three.html',
-            template: './src/service-three.html'
+            filename: 'elektroerozija.html',
+            template: './src/elektroerozija.html'
           }),
           new HtmlWebpackPlugin({
-            filename: 'gallery.html',
-            template: './src/gallery.html'
+            filename: 'galerija.html',
+            template: './src/galerija.html'
           }),
           new HtmlWebpackPlugin({
             filename: 'reference.html',
             template: './src/reference.html'
           }),
           new HtmlWebpackPlugin({
-            filename: 'contact.html',
-            template: './src/contact.html'
+            filename: 'kontakt.html',
+            template: './src/kontakt.html'
           }),
           new HtmlWebpackPlugin({
-            filename: 'about.html',
-            template: './src/about.html'
+            filename: 'o-nama.html',
+            template: './src/o-nama.html'
           }),
            new MiniCssExtractPlugin({
             filename: '[name].css'
