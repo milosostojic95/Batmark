@@ -7,8 +7,8 @@ module.exports =  {
     entry: [require.resolve('./src/js/index.js')],
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'pocetna.html',
-            template: './src/pocetna.html'
+            filename: 'index.html',
+            template: './src/index.html'
           }),
           new HtmlWebpackPlugin({
             filename: 'izrada-alata.html',

@@ -1,9 +1,6 @@
 .service-item-hero {
   height: 730px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(0deg, rgba($primary, 0.3) 0%, rgba($secondary, 0.4) 90%), url('../images/home/homeintro.jpg');
+  
 
   .service-item-hero-wrapper {
     height: 100%;
@@ -106,4 +103,23 @@
       margin: 1rem 0;
     }
   }
+}
+
+.img-one {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(0deg, rgba($primary, 0.3) 0%, rgba($secondary, 0.4) 90%), url('../images/service/izradaalataintro.png');
+}
+.img-two {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(0deg, rgba($primary, 0.3) 0%, rgba($secondary, 0.4) 90%), url('../images/service/izradaalataintro.png');
+}
+.img-three {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(0deg, rgba($primary, 0.3) 0%, rgba($secondary, 0.4) 90%), url('../images/service/izradaalataintro.png');
 }
