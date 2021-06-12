@@ -48,7 +48,6 @@ h6 {
 
 h1 {
   color: $dark-grey;
-  font-weight: bold;
   font-size: 3.2rem;
 }
 h2 {
@@ -90,6 +89,11 @@ h4 {
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: cubic-bezier(0.45, 0.55, 0.15, 1);
     animation-timing-function: cubic-bezier(0.45, 0.55, 0.15, 1);
+
+    @include media-breakpoint-down(md) {
+      height: 200px;
+      width: 200px;
+    }
   }
   @-webkit-keyframes logo-rotation {
     0% {

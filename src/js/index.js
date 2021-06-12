@@ -43,7 +43,7 @@ import '../scss/main.scss';
           margin: 50,
         },
         1200: {
-          margin: 70,
+          margin: 50,
         }
       }
 
@@ -216,14 +216,13 @@ if (galleryImages) {
         newImgWindow.remove();
         closeBtn.remove();
       })
-      // document.addEventListener('keydown', (e) => {
-      //   if (e.key === 'Escape') {
-      //     body.classList.remove('overflow-hidden'),
-      //       document.querySelector('.img-window').remove(),
-      //       document.querySelector('.img-btn-next').remove(),
-      //       document.querySelector('.img-btn-prev').remove()
-      //   }
-      // })
+      document.addEventListener('keydown', (e) => {
+        if (e.which === 27) {
+            body.classList.remove('overflow-hidden'),
+            document.querySelector('.img-window').remove(),
+            document.querySelector('.close-btn').remove();
+        }
+      })
     });
   });
 }

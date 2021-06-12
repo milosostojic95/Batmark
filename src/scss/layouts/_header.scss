@@ -12,6 +12,9 @@
 .navigation {
   background-color: rgba($white, 0.4);
   box-shadow: 0px 3px 9px 2px rgba(46, 61, 98, 0.1);
+  @include media-breakpoint-down(md) {
+    background-color: rgba($white, 0.8);
+  }
 
   .nav-wrapper {
     .navbar-brand {
@@ -28,6 +31,9 @@
           color: $white;
           font-size: 1.1rem;
           font-family: $headingFontFamily;
+          @include media-breakpoint-down(md) {
+            color: $grey;
+          }
           &:hover {
             color: rgba($white, 0.7);
           }

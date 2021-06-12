@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg" href="../src/images/SVG/bm-logo-symbol-color.svg" />
+    <link rel="shortcut icon" href="images/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Masinska obrada materijala" />
     <meta
@@ -24,7 +24,9 @@
       <div class="container">
         <div class="nav-wrapper">
           <nav class="navbar navbar-expand-lg navbar-light w justify-content-between">
-            <a class="navbar-brand font-weight-bold" href="./pocetna"><img src="./images/favicon/favicon.svg" class="img-fluid" alt="Batmark logo" /></a>
+            <a class="navbar-brand font-weight-bold" href="./pocetna"
+              ><img src="./images/favicon/favicon.svg" class="img-fluid" alt="Batmark logo"
+            /></a>
             <button
               class="navbar-toggler"
               type="button"
@@ -44,19 +46,8 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./o-nama">O nama</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" href="./services">Program</a>
-                  <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
-                    <li class="nav-item">
-                      <a class="dropdown-item nav-link" href="./izrada-alata">Konstrukcija i izrada alata</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item nav-link" href="./servis-dorada-alata">Servis i dorada alata</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item nav-link" href="./elektroerozija">Inekciono brizganje plastike</a>
-                    </li>
-                  </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="./program">Program</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./galerija">Galerija</a>
@@ -72,9 +63,11 @@
     </div>
     <div class="about-us-hero">
       <div class="about-us-wrapper d-flex align-items-center">
+        <!-- <video src="./images/service/ezgif.com-gif-maker.mp4" autoplay loop muted></video> -->
         <div class="container">
-          <div class="row">
-            <div class="col-10 mb-5">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 mb-5 text-center">
+              <img src="./images/favicon/favicon.svg" alt="Batmark logo" />
               <h1 class="pb-3">O nama</h1>
               <p>
                 Barmark je osnovan 2012 godine u Čačku, u privatnom vlasništvu Vladana Markovića. Nalazi se u Mrčajevcima kod Čačka. Batmark je mlada
@@ -110,7 +103,7 @@
           <div class="col-lg-5 p-0">
             <img src="./images/service/service1.jpg" alt="Brizgaljka" class="img-fluid technology-img" />
           </div>
-          <div class="col-lg-7 p-0 pl-5">
+          <div class="col-lg-7 p-0 padding-technology">
             <h3 class="mb-5 heading-border-left">Tehnologije</h3>
             <p>Naš mašinski park sastoji se od mašina renomiranih svetskih proizvođača: FANUC / CHARMILLES / JUNG / ACIERA / DECKEL</p>
             <p>
@@ -177,7 +170,7 @@
         </div>
       </div>
     </div>
-    <div class="our-people my-5">
+    <!-- <div class="our-people my-5">
       <div class="container">
         <h2 class="text-center heading-border">Nasi zaposleni</h2>
         <div class="row my-5 img-text-left">
@@ -215,34 +208,34 @@
       </div>
       <div class="contact-us-btn">
         <a class="btn btn-secondary" href="./kontakt">Kontaktiraj nas</a>
-      </div>
+      </div> -->
     </div>
     <footer class="footer">
       <div class="contact-footer">
         <div class="container">
-          <img src="./images/SVG/bm-h-white.svg" alt="" class="footer-brand pl-3 mb-4" />
+          <img src="./images/SVG/bm-h-white.svg" alt="Batmark logo" class="footer-brand pl-3 mb-4" />
           <div class="row pt-3">
-            <div class="col-8">
+            <div class="col-12 col-sm-8">
               <p>Batmark D.O.O</p>
               <p>Mrčajevci bb, 32210 Mrčajevci</p>
-              <p><span>E-mail:</span> +381 060/0346603</p>
-              <p><span>Telefon</span> vladan.batovac@gmail.com</p>
+              <p><span>Telefon</span> +381 060/0346603</p>
+              <p><span>E-mail:</span> vladan.batovac@gmail.com</p>
             </div>
-            <div class="col-xs-12 col-sm-4 d-flex justify-content-end">
+            <div class="col-xs-12 col-sm-4 d-flex justify-content-sm-end">
               <ul class="navbar-nav">
-                <li class="navbar-item"><a class="navbar-link" href="">Pocetna</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="">O nama</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="">Usluge</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="">Reference</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="">Kontakt</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/">Pocetna</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="./o-nama">O nama</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="./program">Program</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="./reference">Reference</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="./kontakt">Kontakt</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="container">
-        <div class="row bottom align-items-center">
-          <div class="col-12">© 2021 All rights reserved</div>
+        <div class="row bottom">
+          <div class="col-12">© Sva prava zadržana 2021 Batmark</div>
         </div>
       </div>
     </footer>

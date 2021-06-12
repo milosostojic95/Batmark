@@ -11,25 +11,17 @@ module.exports =  {
             template: './src/index.html'
           }),
           new HtmlWebpackPlugin({
-            filename: 'izrada-alata.html',
-            template: './src/izrada-alata.html'
-          }),
-          new HtmlWebpackPlugin({
-            filename: 'servis-dorada-alata.html',
-            template: './src/servis-dorada-alata.html'
-          }),
-          new HtmlWebpackPlugin({
-            filename: 'elektroerozija.html',
-            template: './src/elektroerozija.html'
+            filename: 'program.html',
+            template: './src/program.html'
           }),
           new HtmlWebpackPlugin({
             filename: 'galerija.html',
             template: './src/galerija.html'
           }),
-          new HtmlWebpackPlugin({
-            filename: 'reference.html',
-            template: './src/reference.html'
-          }),
+          // new HtmlWebpackPlugin({
+          //   filename: 'reference.html',
+          //   template: './src/reference.html'
+          // }),
           new HtmlWebpackPlugin({
             filename: 'kontakt.html',
             template: './src/kontakt.html'

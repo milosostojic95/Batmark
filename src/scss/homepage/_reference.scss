@@ -16,9 +16,23 @@
         background: $white;
         height: 100px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        a {
+          margin-top: 1rem;
+          color: $grey;
+          font-size: 1rem;
+          cursor: pointer;
+          &:hover {
+            color: rgba($grey, 0.8);
+            text-decoration: none;
+          }
+        }
         img {
           width: 130px;
+          height: auto;
+          height: 100px;
           filter: grayscale(1);
           -webkit-filter: grayscale(1);
           &:hover {
@@ -34,17 +48,17 @@
     }
   }
 
-  .reference-btn {
-    a {
-      font-size: 1rem;
-      font-weight: bold;
-      color: $secondary;
-      @include media-breakpoint-up(sm) {
-        width: 180px;
-      }
-      @include media-breakpoint-up(lg) {
-        width: 160px;
-      }
-    }
-  }
+  // .reference-btn {
+  //   a {
+  //     font-size: 1rem;
+  //     font-weight: bold;
+  //     color: $secondary;
+  //     @include media-breakpoint-up(sm) {
+  //       width: 180px;
+  //     }
+  //     @include media-breakpoint-up(lg) {
+  //       width: 160px;
+  //     }
+  //   }
+  // }
 }
